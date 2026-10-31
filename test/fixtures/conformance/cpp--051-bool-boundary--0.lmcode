@@ -1,0 +1,1 @@
+print(str(host_bool(true)) + ":" + str(host_bool(false)));

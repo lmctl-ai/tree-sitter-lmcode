@@ -1,0 +1,22 @@
+let s = ${f"key {lookup({'x': [1,2]}, ARGV[0])}"};
+let t = ${r'raw\quote'};
+let u = ${path"/tmp/data"};
+let triple = ${"""line
+  text with } # not a comment
+"""};
+let f = ${FR'''value {f"{ARGV[0]}"}
+{{literal}}
+'''};
+let leading = ${.5 + .25};
+let tuple = ${(1, 2,)};
+let empty = ${()};
+pair(<<A, ${"""header
+continued"""});
+actual body
+A
+let comment = ${1 /* } */ + 2 // ignored }
+};
+pair(<<HEADER, ${1 +
+  2});
+body after continued splice
+HEADER

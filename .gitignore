@@ -1,0 +1,6 @@
+node_modules/
+*.so
+*.dylib
+*.dll
+build/
+__pycache__/

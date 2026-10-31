@@ -1,0 +1,59 @@
+fn def_name(n: Node) -> string {
+  # function_definition -> function_declarator -> identifier
+  let name = "";
+  for (i in range(0, n.child_count())) {
+    let d = n.child(i);
+    if (d.kind() == "function_declarator") {
+      for (j in range(0, d.child_count())) {
+        if (d.child(j).kind() == "identifier") { name = d.child(j).text(); }
+      }
+    }
+  }
+  return name;
+}
+
+fn is_static_fn(n: Node) -> int {
+  let hit = 0;
+  for (i in range(0, n.child_count())) {
+    let c = n.child(i);
+    if (c.kind() == "storage_class_specifier" && c.text() == "static") { hit = 1; }
+  }
+  return hit;
+}
+
+@function_definition
+fn no_direct_recursion(n: Node) -> void implements Rule {
+  let name = def_name(n);
+  if (name != "") {
+    let found = 0;
+    for (c in ts.query_c(n, "(call_expression function: (identifier) @fn)")) {
+      if (found == 0 && c.text() == name) {
+        ts.report(n, "direct recursive call to '" + name + "'", "LBC109", "major");
+        found = 1;
+      }
+    }
+  }
+}
+
+@translation_unit
+fn symbol_sets(root: Node) -> void implements Rule {
+  let defs = ts.query_c(root, "(function_definition) @d");
+  let calls = ts.query_c(root, "(call_expression function: (identifier) @fn)");
+  let called = str_map();
+  for (c in calls) { called.set(c.text(), "1"); }
+  let defined = str_map();
+  let libc = "|exit|fgets|free|malloc|printf|putchar|puts|snprintf|strcat|strcmp|strcpy|strlen|strncpy|";
+  for (d in defs) {
+    let name = def_name(d);
+    defined.set(name, "1");
+    if (is_static_fn(d) == 1 && name != "main" && !called.has(name)) {
+      ts.report(d, "static function '" + name + "' never called", "LBC107", "minor");
+    }
+  }
+  for (c in calls) {
+    let name = c.text();
+    if (!defined.has(name) && !str_contains(libc, "|" + name + "|")) {
+      ts.report(c, "call to undefined function '" + name + "' (same-file)", "LBC108", "minor");
+    }
+  }
+}

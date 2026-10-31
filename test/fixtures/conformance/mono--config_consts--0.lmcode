@@ -1,0 +1,5 @@
+region(${REGION});
+hosts(${HOSTS});
+ports(${PORTS});
+replicas(${REPLICAS});
+canary(${CANARY});

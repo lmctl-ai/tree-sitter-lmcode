@@ -1,0 +1,3 @@
+let total = 0;
+for (item in shop.items()) { total = total + item.amount(); }
+print(str(total));

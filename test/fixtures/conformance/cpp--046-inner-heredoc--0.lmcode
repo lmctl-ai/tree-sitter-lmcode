@@ -1,0 +1,9 @@
+let raw = <<RAW;
+  shop ${not_a_splice} "USD"
+RAW
+let dedented = <<~TEXT;
+  hello
+    ledger
+  TEXT
+print(str_replace(raw, "\n", "|"));
+print(str_replace(dedented, "\n", "|"));

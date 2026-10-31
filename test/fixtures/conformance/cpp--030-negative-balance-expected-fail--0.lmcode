@@ -1,0 +1,2 @@
+ledger.record(money(-1));
+print(str(ledger.balance().amount()));

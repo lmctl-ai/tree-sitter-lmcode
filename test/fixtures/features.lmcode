@@ -1,0 +1,28 @@
+# Syntax coverage: schema names/types are intentionally opaque to this grammar.
+let words = qw(alpha beta path/to/file);
+let integers = qi(0 -2 9223372036854775807);
+let floats = qf(0 -2.5 1e-30);
+let config = %(bare => "x", "quoted" => "y", ("computed" + " key") => "z",);
+let modulo = 5 % (2);
+let text = <<TEXT;
+raw text with } and ${not_a_splice}
+TEXT
+pair(<<FIRST, <<~SECOND);
+first payload
+FIRST
+    second payload
+    SECOND
+let doc = json <<JSON;
+{"key": [1, true, null]}
+JSON
+let outer = ${pick({name: ARGV[0], xs: [1, 2]})};
+for (i in range(0, 4)) { if (i == 1) { continue; } }
+while (false) { break; }
+switch (modulo) { case 1: { trace("one"); } default: { trace("other"); } }
+@case fn rule(n: Node) -> bool implements Rule {
+  $return.name = "rule";
+  $return["count"] = n.count();
+  return n.matches();
+}
+$return = null;
+$return.result = config;

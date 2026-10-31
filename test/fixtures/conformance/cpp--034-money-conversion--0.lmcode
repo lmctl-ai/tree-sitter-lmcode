@@ -1,0 +1,3 @@
+let converted = money(5) + 5;
+let twice = converted.times(2);
+print("conversion");

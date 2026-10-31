@@ -1,0 +1,2 @@
+let value = str_map().get("missing");
+print("unreachable map missing");

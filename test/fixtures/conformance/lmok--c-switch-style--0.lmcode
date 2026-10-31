@@ -1,0 +1,24 @@
+@switch_statement
+fn switch_without_default(n: Node) -> void implements Rule {
+  let has_default = 0;
+  for (i in range(0, n.child_count())) {
+    let body = n.child(i);
+    if (body.kind() == "compound_statement") {
+      for (j in range(0, body.child_count())) {
+        let stmt = body.child(j);
+        if (stmt.kind() == "case_statement" && str_starts_with(stmt.text(), "default")) { has_default = 1; }
+      }
+    }
+  }
+  if (has_default == 0) {
+    ts.report(n, "switch without default", "LBC103", "minor");
+  }
+}
+
+@if_statement
+fn if_without_braces(n: Node) -> void implements Rule {
+  # named children: condition (parenthesized_expression), consequence, [else_clause]
+  if (n.child_count() > 1 && n.child(1).kind() != "compound_statement") {
+    ts.report(n.child(1), "if without braces", "LBC104", "minor");
+  }
+}

@@ -1,0 +1,10 @@
+let cases = json_parse(${json_stringify(success)});
+for (i in range(0, cases.len())) {
+ let test = cases.at(i);
+ let context = test.get("context");
+ let before = context.to_json();
+ let result = template_render(test.get("template").as_string(), context);
+ print(test.get("name").as_string() + ": " + str(result == test.get("result").as_string()));
+ print("immutable: " + str(before == context.to_json()));
+}
+print(str_hex_encode(template_render(str_hex_decode("ff003c6e3e"), json_parse(${json_stringify({n:7})}))));

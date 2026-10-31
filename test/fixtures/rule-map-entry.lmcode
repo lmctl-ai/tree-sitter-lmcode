@@ -1,0 +1,7 @@
+# Rule-pack-style fixture: current upstream lmok bodies contain no => token.
+# Keep this independent guard alongside the real sample-suite map fixtures.
+@case fn rule(n: Node) -> bool implements Rule {
+  let metadata = %(rule => "LMTEST01", severity => "warning");
+  emit(n, metadata);
+  return true;
+}

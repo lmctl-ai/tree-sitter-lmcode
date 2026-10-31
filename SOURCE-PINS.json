@@ -1,0 +1,18 @@
+{
+  "mono": {
+    "repo": "https://github.com/lmctlhq/lmctl-mono",
+    "commit": "a9df5a8b793ddc90f572d5c5be5800ba8dc448dc"
+  },
+  "lmok": {
+    "repo": "https://github.com/lmctl-ai/lmok",
+    "commit": "f13cc8f7df75f87d631adfbcb99ba4b291e34272"
+  },
+  "cpp": {
+    "repo": "https://github.com/lmctl-ai/lmcode-cpp",
+    "commit": "df286aced04cca0767d61a1468867fbb3c20a6db"
+  },
+  "spec": {
+    "repo": "https://github.com/lmctl-ai/lmcode",
+    "commit": "ae6c97521a795adca2b2c825dcfe9b3193d24f72"
+  }
+}

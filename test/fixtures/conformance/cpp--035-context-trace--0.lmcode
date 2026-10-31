@@ -1,0 +1,3 @@
+let name = shop.label();
+let balance = ledger.balance();
+print(name + ":" + str(balance.amount()));

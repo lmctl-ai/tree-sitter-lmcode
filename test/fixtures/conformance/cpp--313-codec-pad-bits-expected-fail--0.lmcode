@@ -1,0 +1,2 @@
+print("reject noncanonical Base64");
+print(str_base64_decode("Zh=="));

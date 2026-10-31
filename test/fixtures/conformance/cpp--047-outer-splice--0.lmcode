@@ -1,0 +1,5 @@
+let cents = ${amount};
+let factor = ${rate};
+let name = ${label};
+let active = ${enabled};
+print(str(cents) + ":" + str(factor) + ":" + name + ":" + str(active));

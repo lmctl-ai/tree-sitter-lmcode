@@ -1,0 +1,9 @@
+let raw = <<RAW;
+  hello ${not_interpolated}
+  "quotes" and """ triples
+RAW
+let dedent = <<~DED;
+    first
+      second
+    DED
+t.int(str_len(raw));

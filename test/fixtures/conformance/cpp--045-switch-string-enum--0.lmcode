@@ -1,0 +1,4 @@
+let label = shop.label();
+switch (label) { case "sample shop": { print("known"); } default: { print("unknown"); } }
+let c = shop.currency();
+if (c == Currency.USD) { print("USD"); }

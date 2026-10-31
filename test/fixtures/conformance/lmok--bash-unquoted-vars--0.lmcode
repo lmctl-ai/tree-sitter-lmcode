@@ -1,0 +1,23 @@
+fn is_quoted(n: Node) -> int {
+  let hit = 0;
+  let cur = n;
+  while (cur.has_parent()) {
+    cur = cur.parent();
+    if (cur.kind() == "string") { hit = 1; }
+  }
+  return hit;
+}
+
+@simple_expansion
+fn unquoted_simple_expansion(n: Node) -> void implements Rule {
+  if (is_quoted(n) == 0) {
+    ts.report(n, "unquoted variable " + n.text(), "LBS101", "major");
+  }
+}
+
+@expansion
+fn unquoted_expansion(n: Node) -> void implements Rule {
+  if (is_quoted(n) == 0) {
+    ts.report(n, "unquoted variable " + n.text(), "LBS101", "major");
+  }
+}

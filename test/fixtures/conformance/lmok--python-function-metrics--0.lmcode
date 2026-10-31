@@ -1,0 +1,7 @@
+@function_definition
+fn function_too_long(n: Node) -> void implements Rule {
+  let rows = n.end_row() - n.start_row();
+  if (rows > 60) {
+    ts.report(n, "function too long (" + str(rows) + " rows)", "LBP101", "major");
+  }
+}

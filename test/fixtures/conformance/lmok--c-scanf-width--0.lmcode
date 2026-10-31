@@ -1,0 +1,14 @@
+@call_expression
+fn check_scanf(call: Node) -> void implements Rule {
+  let captures = ts.query_c(call, "((call_expression function: (identifier) @fn (argument_list (string_literal (string_content) @fmt))) (#match? @fn \"^(f)?scanf$\"))");
+  for (i in range(0, captures.len() / 2)) {
+    let fn_node = captures.at(2 * i);
+    let fmt_node = captures.at(2 * i + 1);
+    if (call.child_count() > 0 && fn_node.start_row() == call.child(0).start_row() && fn_node.start_col() == call.child(0).start_col()) {
+      let fmt = fmt_node.text();
+      if (str_contains(fmt, "%s") || str_contains(fmt, "%[")) {
+        ts.report(fn_node, "scanf-family call without field width in \"" + fmt + "\"", "LBC106", "major");
+      }
+    }
+  }
+}

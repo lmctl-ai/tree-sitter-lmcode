@@ -1,0 +1,34 @@
+@function_definition
+fn function_too_long(n: Node) -> void implements Rule {
+  let rows = n.end_row() - n.start_row();
+  if (rows > 60) {
+    ts.report(n, "function too long (" + str(rows) + " rows)", "LBC101", "major");
+  }
+}
+
+fn count_params(n: Node) -> int {
+  # function_definition -> function_declarator -> parameter_list -> parameter_declaration*
+  let count = 0;
+  for (i in range(0, n.child_count())) {
+    let d = n.child(i);
+    if (d.kind() == "function_declarator") {
+      for (j in range(0, d.child_count())) {
+        let pl = d.child(j);
+        if (pl.kind() == "parameter_list") {
+          for (k in range(0, pl.child_count())) {
+            if (pl.child(k).kind() == "parameter_declaration") { count = count + 1; }
+          }
+        }
+      }
+    }
+  }
+  return count;
+}
+
+@function_definition
+fn too_many_parameters(n: Node) -> void implements Rule {
+  let count = count_params(n);
+  if (count > 7) {
+    ts.report(n, "too many parameters (" + str(count) + ")", "LBC102", "minor");
+  }
+}

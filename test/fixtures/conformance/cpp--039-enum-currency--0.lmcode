@@ -1,0 +1,4 @@
+switch (shop.currency()) {
+  case Currency.USD: { print("USD"); }
+  case Currency.EUR: { print("EUR"); }
+}

@@ -1,0 +1,10 @@
+@object
+fn object_too_large(n: Node) -> void implements Rule {
+  let pairs = 0;
+  for (i in range(0, n.child_count())) {
+    if (n.child(i).kind() == "pair") { pairs = pairs + 1; }
+  }
+  if (pairs > 50) {
+    ts.report(n, "object too large (" + str(pairs) + " entries)", "LBJ102", "minor");
+  }
+}

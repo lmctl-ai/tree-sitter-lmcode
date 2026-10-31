@@ -1,0 +1,2 @@
+let item = shop.items().at(99);
+print("unreachable items oob");

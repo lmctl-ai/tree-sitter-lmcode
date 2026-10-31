@@ -1,0 +1,15 @@
+@object
+fn no_duplicate_keys(n: Node) -> void implements Rule {
+  let seen = str_map();
+  for (i in range(0, n.child_count())) {
+    let pair = n.child(i);
+    if (pair.kind() == "pair") {
+      let key = pair.child(0).text();
+      if (seen.has(key)) {
+        ts.report(pair, "duplicate key " + key, "LBJ101", "major");
+      } else {
+        seen.set(key, "1");
+      }
+    }
+  }
+}

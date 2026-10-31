@@ -1,0 +1,27 @@
+fn is_control(n: Node) -> int {
+  let hit = 0;
+  let k = n.kind();
+  if (k == "if_statement" || k == "for_statement" || k == "while_statement") { hit = 1; }
+  return hit;
+}
+
+@if_statement
+fn no_deep_nesting(n: Node) -> void implements Rule {
+  if (is_control(n) == 1) {
+    let depth = 1;
+    let cur = n;
+    while (cur.has_parent()) {
+      cur = cur.parent();
+      if (is_control(cur) == 1) { depth = depth + 1; }
+    }
+    if (depth > 4) {
+      ts.report(n, "control structure nested " + str(depth) + " deep (max 4)", "LBC105", "major");
+    }
+  }
+}
+
+@for_statement
+fn no_deep_nesting_for(n: Node) -> void implements Rule { no_deep_nesting(n); }
+
+@while_statement
+fn no_deep_nesting_while(n: Node) -> void implements Rule { no_deep_nesting(n); }

@@ -1,0 +1,19 @@
+@object
+fn no_duplicate_values(n: Node) -> void implements Rule {
+  let seen = str_map();
+  for (i in range(0, n.child_count())) {
+    let pair = n.child(i);
+    if (pair.kind() == "pair") {
+      # Last named child is the value, even with comments between key and value.
+      let value = pair.child(pair.child_count() - 1);
+      if (value.kind() == "string") {
+        let text = value.text();
+        if (seen.has(text)) {
+          ts.report(value, "repeated sibling string value " + text, "LBJ105", "minor");
+        } else {
+          seen.set(text, "1");
+        }
+      }
+    }
+  }
+}

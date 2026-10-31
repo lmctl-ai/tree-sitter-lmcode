@@ -1,0 +1,3 @@
+let zero = 0;
+let n = 1 % zero;
+print("unreachable modzero");

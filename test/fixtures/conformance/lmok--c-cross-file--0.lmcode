@@ -1,0 +1,32 @@
+fn def_name(n: Node) -> string {
+  let name = "";
+  for (i in range(0, n.child_count())) {
+    let d = n.child(i);
+    if (d.kind() == "function_declarator") {
+      for (j in range(0, d.child_count())) {
+        if (d.child(j).kind() == "identifier") { name = d.child(j).text(); }
+      }
+    }
+  }
+  return name;
+}
+
+let tree_a = ts.parse_c(file_read("tests/fixtures/cross/a.c"));
+let tree_b = ts.parse_c(file_read("tests/fixtures/cross/b.c"));
+
+# Union of defined names over both files.
+let defined = str_map();
+for (d in ts.query_c(tree_a.root(), "(function_definition) @d")) { defined.set(def_name(d), "1"); }
+for (d in ts.query_c(tree_b.root(), "(function_definition) @d")) { defined.set(def_name(d), "1"); }
+
+# LBC110: calls in a.c whose target is defined in NEITHER file.
+let libc = "|printf|fgets|malloc|free|";
+for (c in ts.query_c(tree_a.root(), "(call_expression function: (identifier) @fn)")) {
+  let name = c.text();
+  if (!defined.has(name) && !str_contains(libc, "|" + name + "|")) {
+    ts.report(c, "call to undefined function '" + name + "' (any file)", "LBC110", "minor");
+  }
+}
+
+println(ts.report_json());
+println(str(ts.report_count()) + " findings");

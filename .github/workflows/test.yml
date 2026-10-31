@@ -1,0 +1,42 @@
+name: grammar
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, macos-15]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Install pinned CLI in private prefix
+        shell: bash
+        run: |
+          npm install --ignore-scripts --prefix "$RUNNER_TEMP/ts" tree-sitter-cli@0.27.1
+          (cd "$RUNNER_TEMP/ts/node_modules/tree-sitter-cli" && node install.js)
+          echo "$RUNNER_TEMP/ts/node_modules/.bin" >> "$GITHUB_PATH"
+          echo "TREE_SITTER=$RUNNER_TEMP/ts/node_modules/.bin/tree-sitter" >> "$GITHUB_ENV"
+      - name: Generate and verify committed C
+        run: |
+          tree-sitter --version
+          tree-sitter generate
+          git diff --exit-code -- src
+          cc -std=c11 -Wall -Wextra -Werror -Isrc -c src/scanner.c -o /tmp/scanner.o
+      - name: Corpus, conformance, refusals and incremental edits
+        run: |
+          tree-sitter test --rebuild
+          python3 scripts/conformance.py
+          python3 scripts/negative.py
+          python3 scripts/incremental.py
+          python3 scripts/scanner-limits.py
+      - name: Failing controls on production copies
+        run: python3 scripts/controls.py

@@ -1,0 +1,887 @@
+==================
+empty
+==================
+
+---
+
+(source_file
+  (end_of_file))
+
+==================
+arithmetic
+==================
+let x = 1 + 2 * 3; let b = !(x < 9) || false; x = x - 1;
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (binary_expression
+      (int_literal)
+      (binary_expression
+        (int_literal)
+        (int_literal))))
+  (let_statement
+    (identifier)
+    (binary_expression
+      (unary_expression
+        (parenthesized
+          (binary_expression
+            (identifier)
+            (int_literal))))
+      (false)))
+  (assignment_statement
+    (identifier)
+    (binary_expression
+      (identifier)
+      (int_literal)))
+  (end_of_file))
+
+==================
+comments
+==================
+# comment
+let x=1; # tail
+
+---
+
+(source_file
+  (comment)
+  (let_statement
+    (identifier)
+    (int_literal))
+  (comment)
+  (end_of_file))
+
+==================
+strings
+==================
+let s="a\n\t\r\\\"";
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (string))
+  (end_of_file))
+
+==================
+plain-heredoc
+==================
+let s=<<TAG;
+hello ${not_a_field}
+TAG
+
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (heredoc_literal
+      (heredoc_start)))
+  (heredoc_body)
+  (end_of_file))
+
+==================
+dedent-heredoc
+==================
+let s=<<~TAG;
+  body
+  TAG
+
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (heredoc_literal
+      (heredoc_start)))
+  (heredoc_body)
+  (end_of_file))
+
+==================
+empty-heredoc
+==================
+let s=<<E;
+E
+
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (heredoc_literal
+      (heredoc_start)))
+  (heredoc_body)
+  (end_of_file))
+
+==================
+queued-heredocs
+==================
+pair(<<A, <<B);
+first
+A
+second
+B
+
+---
+
+(source_file
+  (expression_statement
+    (call_expression
+      (identifier)
+      (argument_list
+        (heredoc_literal
+          (heredoc_start))
+        (heredoc_literal
+          (heredoc_start)))))
+  (heredoc_body)
+  (heredoc_body)
+  (end_of_file))
+
+==================
+queue-same-tag
+==================
+pair(<<A, <<A);
+first
+A
+second
+A
+
+---
+
+(source_file
+  (expression_statement
+    (call_expression
+      (identifier)
+      (argument_list
+        (heredoc_literal
+          (heredoc_start))
+        (heredoc_literal
+          (heredoc_start)))))
+  (heredoc_body)
+  (heredoc_body)
+  (end_of_file))
+
+==================
+queue-across-statements
+==================
+let a=<<A; let b=<<B;
+a
+A
+b
+B
+
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (heredoc_literal
+      (heredoc_start)))
+  (let_statement
+    (identifier)
+    (heredoc_literal
+      (heredoc_start)))
+  (heredoc_body)
+  (heredoc_body)
+  (end_of_file))
+
+==================
+heredoc-in-argument-continuation
+==================
+pair(<<A,
+a
+A
+42);
+---
+
+(source_file
+  (expression_statement
+    (call_expression
+      (identifier)
+      (argument_list
+        (heredoc_literal
+          (heredoc_start))
+        (heredoc_body)
+        (int_literal))))
+  (end_of_file))
+
+==================
+json-heredoc
+==================
+let x=json <<J;
+{ "x": true }
+J
+
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (json_literal
+      (heredoc_literal
+        (heredoc_start))))
+  (heredoc_body)
+  (end_of_file))
+
+==================
+raw-body-delimiters
+==================
+let s=<<RAW;
+end _lmcode_
+# not a code comment
+""" } ${foo}
+RAW
+
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (heredoc_literal
+      (heredoc_start)))
+  (heredoc_body)
+  (end_of_file))
+
+==================
+qw
+==================
+let x=qw(alpha beta path/to/file x-y $dollar café);
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (qw_literal
+      (qw_word)
+      (qw_word)
+      (qw_word)
+      (qw_word)
+      (qw_word)
+      (qw_word)))
+  (end_of_file))
+
+==================
+qi
+==================
+let x=qi(0 -2 9223372036854775807);
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (qi_literal
+      (qi_word)
+      (qi_word)
+      (qi_word)))
+  (end_of_file))
+
+==================
+qf
+==================
+let x=qf(0 -0.25 1e-30 2E+3);
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (qf_literal
+      (qf_word)
+      (qf_word)
+      (qf_word)
+      (qf_word)))
+  (end_of_file))
+
+==================
+quoted-comments
+==================
+let x=qw(a # not a closer )
+b);
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (qw_literal
+      (qw_word)
+      (comment)
+      (qw_word)))
+  (end_of_file))
+
+==================
+quoted-empty
+==================
+let a=qw();let b=qi();let c=qf();
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (qw_literal))
+  (let_statement
+    (identifier)
+    (qi_literal))
+  (let_statement
+    (identifier)
+    (qf_literal))
+  (end_of_file))
+
+==================
+quoted-methods
+==================
+let a=qw(a b).len();let b=qi(1 2).at(0);
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (call_expression
+      (member_expression
+        (qw_literal
+          (qw_word)
+          (qw_word))
+        (identifier))
+      (argument_list)))
+  (let_statement
+    (identifier)
+    (call_expression
+      (member_expression
+        (qi_literal
+          (qi_word)
+          (qi_word))
+        (identifier))
+      (argument_list
+        (int_literal))))
+  (end_of_file))
+
+==================
+quote-names
+==================
+let qw=1;fn qi(x:int)->int{return x;}let y=object.qf(3);let json=2;json(4);
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (int_literal))
+  (function_declaration
+    (identifier)
+    (parameter
+      (identifier)
+      (type
+        (identifier)))
+    (type
+      (identifier))
+    (function_body
+      (return_statement
+        (identifier))))
+  (let_statement
+    (identifier)
+    (call_expression
+      (member_expression
+        (identifier)
+        (identifier))
+      (argument_list
+        (int_literal))))
+  (let_statement
+    (identifier)
+    (int_literal))
+  (expression_statement
+    (call_expression
+      (identifier)
+      (argument_list
+        (int_literal))))
+  (end_of_file))
+
+==================
+maps
+==================
+let a=%();let b=%(word=>1,"text"=>2,("x"+"y")=>3,);
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (map_literal))
+  (let_statement
+    (identifier)
+    (map_literal
+      (map_entry
+        (identifier)
+        (int_literal))
+      (map_entry
+        (string)
+        (int_literal))
+      (map_entry
+        (parenthesized
+          (binary_expression
+            (string)
+            (string)))
+        (int_literal))))
+  (end_of_file))
+
+==================
+modulo
+==================
+let n=5%(2);let m=10%3;
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (binary_expression
+      (int_literal)
+      (parenthesized
+        (int_literal))))
+  (let_statement
+    (identifier)
+    (binary_expression
+      (int_literal)
+      (int_literal)))
+  (end_of_file))
+
+==================
+loops
+==================
+for(i in range(0,4)){while(false){break;}continue;}for(item in items){use(item);}
+---
+
+(source_file
+  (for_statement
+    (identifier)
+    (range_expression
+      (int_literal)
+      (int_literal))
+    (block
+      (while_statement
+        (false)
+        (block
+          (break_statement)))
+      (continue_statement)))
+  (for_statement
+    (identifier)
+    (identifier)
+    (block
+      (expression_statement
+        (call_expression
+          (identifier)
+          (argument_list
+            (identifier))))))
+  (end_of_file))
+
+==================
+conditions
+==================
+if(true){use(1);}else if(false){use(2);}else{use(3);}
+---
+
+(source_file
+  (if_statement
+    (true)
+    (block
+      (expression_statement
+        (call_expression
+          (identifier)
+          (argument_list
+            (int_literal)))))
+    (if_statement
+      (false)
+      (block
+        (expression_statement
+          (call_expression
+            (identifier)
+            (argument_list
+              (int_literal)))))
+      (block
+        (expression_statement
+          (call_expression
+            (identifier)
+            (argument_list
+              (int_literal)))))))
+  (end_of_file))
+
+==================
+switch
+==================
+switch(n){case -1:{use(1);}case 2:{use(2);}default:{use(0);}}
+---
+
+(source_file
+  (switch_statement
+    (identifier)
+    (switch_case
+      (int_literal)
+      (block
+        (expression_statement
+          (call_expression
+            (identifier)
+            (argument_list
+              (int_literal))))))
+    (switch_case
+      (int_literal)
+      (block
+        (expression_statement
+          (call_expression
+            (identifier)
+            (argument_list
+              (int_literal))))))
+    (default_case
+      (block
+        (expression_statement
+          (call_expression
+            (identifier)
+            (argument_list
+              (int_literal)))))))
+  (end_of_file))
+
+==================
+enum-switch
+==================
+switch(c){case Color.Red:{use(c);}default:{use(Color.Blue);}}
+---
+
+(source_file
+  (switch_statement
+    (identifier)
+    (switch_case
+      (member_expression
+        (identifier)
+        (identifier))
+      (block
+        (expression_statement
+          (call_expression
+            (identifier)
+            (argument_list
+              (identifier))))))
+    (default_case
+      (block
+        (expression_statement
+          (call_expression
+            (identifier)
+            (argument_list
+              (member_expression
+                (identifier)
+                (identifier))))))))
+  (end_of_file))
+
+==================
+functions
+==================
+fn count(x:Thing,n:int)->int {let y=x.size()+n;return y;}fn notify()->void {emit();}
+---
+
+(source_file
+  (function_declaration
+    (identifier)
+    (parameter
+      (identifier)
+      (type
+        (identifier)))
+    (parameter
+      (identifier)
+      (type
+        (identifier)))
+    (type
+      (identifier))
+    (function_body
+      (let_statement
+        (identifier)
+        (binary_expression
+          (call_expression
+            (member_expression
+              (identifier)
+              (identifier))
+            (argument_list))
+          (identifier)))
+      (return_statement
+        (identifier))))
+  (function_declaration
+    (identifier)
+    (type
+      (identifier))
+    (function_body
+      (expression_statement
+        (call_expression
+          (identifier)
+          (argument_list)))))
+  (end_of_file))
+
+==================
+entries
+==================
+@function_definition fn rule(n:Node)->bool implements Rule{return n.valid();}
+---
+
+(source_file
+  (function_declaration
+    (annotation
+      (identifier))
+    (identifier)
+    (parameter
+      (identifier)
+      (type
+        (identifier)))
+    (type
+      (identifier))
+    (implements_clause
+      (identifier))
+    (function_body
+      (return_statement
+        (call_expression
+          (member_expression
+            (identifier)
+            (identifier))
+          (argument_list)))))
+  (end_of_file))
+
+==================
+keyword-annotation
+==================
+@if fn rule(n:Node)->void implements Visitor {use(n);}
+---
+
+(source_file
+  (function_declaration
+    (annotation
+      (identifier))
+    (identifier)
+    (parameter
+      (identifier)
+      (type
+        (identifier)))
+    (type
+      (identifier))
+    (implements_clause
+      (identifier))
+    (function_body
+      (expression_statement
+        (call_expression
+          (identifier)
+          (argument_list
+            (identifier))))))
+  (end_of_file))
+
+==================
+method-chains
+==================
+let x=root.child(0).name();let e=Color.Red;
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (call_expression
+      (member_expression
+        (call_expression
+          (member_expression
+            (identifier)
+            (identifier))
+          (argument_list
+            (int_literal)))
+        (identifier))
+      (argument_list)))
+  (let_statement
+    (identifier)
+    (member_expression
+      (identifier)
+      (identifier)))
+  (end_of_file))
+
+==================
+return-forms
+==================
+$return=7;$return=null;$return.name="x";$return["dynamic"+str(1)]=null;
+---
+
+(source_file
+  (return_assignment
+    (return_target)
+    (int_literal))
+  (return_assignment
+    (return_target)
+    (null))
+  (return_assignment
+    (return_target
+      (identifier))
+    (string))
+  (return_assignment
+    (return_target
+      (binary_expression
+        (string)
+        (call_expression
+          (identifier)
+          (argument_list
+            (int_literal)))))
+    (null))
+  (end_of_file))
+
+==================
+return-in-entry
+==================
+@item fn rule(n:Node)->int implements Score{$return.name=n.name();return 7;}
+---
+
+(source_file
+  (function_declaration
+    (annotation
+      (identifier))
+    (identifier)
+    (parameter
+      (identifier)
+      (type
+        (identifier)))
+    (type
+      (identifier))
+    (implements_clause
+      (identifier))
+    (function_body
+      (return_assignment
+        (return_target
+          (identifier))
+        (call_expression
+          (member_expression
+            (identifier)
+            (identifier))
+          (argument_list)))
+      (return_statement
+        (int_literal))))
+  (end_of_file))
+
+==================
+splice-structure
+==================
+let x=${pick({key: ARGV[0], values:[1,2]})};
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (splice
+      (splice_start)
+      (splice_call
+        (identifier)
+        (splice_object
+          (splice_pair
+            (identifier)
+            (splice_index
+              (identifier)
+              (int_literal)))
+          (splice_pair
+            (identifier)
+            (splice_list
+              (int_literal)
+              (int_literal)))))
+      (splice_end)))
+  (end_of_file))
+
+==================
+splice-condition
+==================
+let x=${a ? b[0] : c.value};
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (splice
+      (splice_start)
+      (splice_conditional
+        (identifier)
+        (splice_index
+          (identifier)
+          (int_literal))
+        (splice_member
+          (identifier)
+          (identifier)))
+      (splice_end)))
+  (end_of_file))
+
+==================
+splice-string-braces
+==================
+let x=${f"name {lookup({key:1})} {{literal}}"};
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (splice
+      (splice_start)
+      (splice_fstring
+        (splice_interpolation
+          (splice_call
+            (identifier)
+            (splice_object
+              (splice_pair
+                (identifier)
+                (int_literal))))))
+      (splice_end)))
+  (end_of_file))
+
+==================
+splice-comments
+==================
+let x=${1 /* } */ + 2 // }
+};
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (splice
+      (splice_start)
+      (splice_binary
+        (int_literal)
+        (splice_comment)
+        (int_literal))
+      (splice_comment)
+      (splice_end)))
+  (end_of_file))
+
+==================
+splice-header-newline
+==================
+pair(<<A, ${"""multi
+line"""});
+real body
+A
+
+---
+
+(source_file
+  (expression_statement
+    (call_expression
+      (identifier)
+      (argument_list
+        (heredoc_literal
+          (heredoc_start))
+        (splice
+          (splice_start)
+          (splice_triple_string)
+          (splice_end)))))
+  (heredoc_body)
+  (end_of_file))
+
+==================
+splice-tuple
+==================
+let x=${(1,2,)};let y=${()};
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (splice
+      (splice_start)
+      (splice_parenthesized
+        (int_literal)
+        (int_literal))
+      (splice_end)))
+  (let_statement
+    (identifier)
+    (splice
+      (splice_start)
+      (splice_parenthesized)
+      (splice_end)))
+  (end_of_file))

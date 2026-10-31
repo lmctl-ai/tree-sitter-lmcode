@@ -1,0 +1,2084 @@
+{
+  "sources": [
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/01_dsl_heredoc.lms",
+      "sha256": "62c55f82ae1bd114470a00f5ae16575a46cf824be4c27cc7dfce6437299e5b65",
+      "blocks": 1
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/agent_fanout.lms",
+      "sha256": "e093709447f4ddf300b8c2110ba0da7907367dd96f85606838d4e82c21774561",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/agent_observe.lms",
+      "sha256": "0a1c72b21dba43dc2a708f0358cbd038457e36e3a7c986bfd46aecb1143c9b6a",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/agent_prompt.lms",
+      "sha256": "f5dc8eef33f4aa3fc1b78212a053939d16a0e15cff875fd0a351a201aa6b1221",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/agent_reply_helpers.lms",
+      "sha256": "0202343a5fd05ab5ca72a735848f745a3f41afa78763aa13c2a93d4277c0caf2",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/agent_teamfile.lms",
+      "sha256": "4b44df1c5c165ad9ec801cd2af44e3d162e63bd930eb424fa8ba8c59b303872c",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/agents_offline_mock.lms",
+      "sha256": "95264c7e92cfbda1e047ae509c9d427fde5849a61de086fee5714033e765cd56",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/argv.lms",
+      "sha256": "75cd9f570bb619e1088db076ad340bbc77b946aa0cb6a51fbf40ba6ef4b304e9",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/batchscript.lms",
+      "sha256": "6cd0b34e5b31789d822615d4dad982f13636d544ec68b2b1595341088d000f75",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/book_greetings.lms",
+      "sha256": "1523fe247a4e1fcbd9ebfe44e979a6a1c58540b9ceb5ff77d1637206cf4fe48e",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/book_live.lms",
+      "sha256": "625fd2c71480d18d4283e7c2ec28e927ad72ad0de66b663e78574bb84c601109",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/checking_and_dry_run.lms",
+      "sha256": "d954637f75b2e65955189ff3fddd3ca568ca10400b636009c61d3b939819c343",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/cmd_blocks.lms",
+      "sha256": "c60c0e632b516461bb0ea06e20c4436f1746e0766178e7a63f30b0d2220bbbc0",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/commands.lms",
+      "sha256": "e4603303bce6a14a8dc044e0c9c0f4c6e7d3af9214d7c53ce747d724b4591608",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/config_consts.lms",
+      "sha256": "235d163a191067f957da5280a31157f02cce23e458b80a7a575a436817534f06",
+      "blocks": 2
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/control_flow.lms",
+      "sha256": "f5ac354eb23db3378633b6903fafe589216550e23c22c7b457be78e3760169d7",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/data_blocks_csv_json.lms",
+      "sha256": "3c6fad94d17a2c3b067ec6a8a55913531b037b24f7f2e079ee82f6336a564d02",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/data_blocks_toml_props.lms",
+      "sha256": "b8c16cd580628acccf2c37c7ca2614b76122223c87d5ace480bac856d22b7452",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/env_and_time.lms",
+      "sha256": "f1c8247aa34c11051be1fedb7e0ff9d29ff370bc5f4a90efa2f5c0439b5d9b9d",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/errors_and_exit.lms",
+      "sha256": "9c004903d799bee17cd854954ec1606c5797774f08098d89b07069d421aeecca",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/errors_and_exit_failing.lms",
+      "sha256": "30550ecf42e9c41fbe3754a26d2fad536df44db7500b689d6775a734c5c22ad9",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/expand.lms",
+      "sha256": "a0d10f1ab5c4cbfdca13028c3e69a4a153ab66dffd8a991babadd7af7898c5e2",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/files.lms",
+      "sha256": "6cc40cd59970eb6126024f4aa9ce9aa4461413ea7c11f1593b984b8539d4873c",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/files_more.lms",
+      "sha256": "14e2110f865bd5a7b337d939c4138d2b02ef6ce20f611a13f042a9a4f0f9e4e4",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/formatting.lms",
+      "sha256": "0390d65effcc066883417b9efe405e478c995d08d798ca0914d0951c682a5dea",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/functions.lms",
+      "sha256": "99519eaef2b4420717d227b4fe76eee528ade4609fbc82b7a96e2a70dc26d140",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/git2_status.lms",
+      "sha256": "91aff835004114fa34bf4759c20ecbfa029464e9e7341b0276fc98e14e535b80",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/git_summary.lms",
+      "sha256": "5436452b2eb564d1c727e9c0d025a016323924a63ce4c651011d73f48689eaf1",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/github_query.lms",
+      "sha256": "301884d34a60b8d98c1092743f11f3722e42862f2dd86e3c963bd77b90c975e5",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/graphql_query.lms",
+      "sha256": "a8b07fb19fa896adc50f6b289198107d62a82d620e7beb085ad35df8d403920b",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/hello.lms",
+      "sha256": "d492ad3ab96effccb23f034f639e738e9f3d13a1222e5636cfd61bb735daf917",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/imports_and_packages.lms",
+      "sha256": "776c73d31f3c5fd77eb13e0dc105e6f5a071af5a6d3747e578a250c7d6054eef",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/inline_data.lms",
+      "sha256": "e9d6cad0a35a3d9ef5ea2ad15714b5bd96ba182afb8c2b2f2a41d7990dbb24dd",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/lists.lms",
+      "sha256": "64d070f87e6730d45697165d7a5d0e4e0f7469f434f89cf4a75b155a33d8f332",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/maps_and_json.lms",
+      "sha256": "e44f079e4e573cc8bc5f5c5269b1375be13eb773ac420365459f0a79ad0222dd",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/math_and_predicates.lms",
+      "sha256": "461d06ad1ae4fd6d4e52747258cf5b151d809af2805b3dfe400d3d75404cd94f",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/parallel_map.lms",
+      "sha256": "9949556b771e2cf40c69742abb26282fa7aee32da86a355073acc2a84e2fdfc5",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/parallel_sync.lms",
+      "sha256": "7c908c74fb2ff9c5c9a21ff96492ace5c0db6b649108c3a6f3fe7a186fc2294a",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/path_literals.lms",
+      "sha256": "a94557175a35b7078a2a00560b5a1d3bf8a2877b0553e72e593bb8e99484cec1",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/properties_and_pref.lms",
+      "sha256": "2256674220836a3f7955ddd1c85c4cf92d5edb50a5b0a168e9108525dd300e50",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/recover_steps.lms",
+      "sha256": "55a0755de680e7309b97c3a832007388ef19fde6905b495f68b51af106a4ef52",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/regex.lms",
+      "sha256": "55868546eabf5e4eea3aaa52c8594223935da078b67fdd1f3e245a72eaf0945f",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/resource_batch.lms",
+      "sha256": "b01598fe790d7e5c33fedbfd57119e8a95f47e30b9d488c384a93c9638bb9137",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/resource_escape.lms",
+      "sha256": "e9144bda3c71cb4ea85d73f316e205763049e9fe5393dee8a500ff3ce96fadbe",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/resource_signal.lms",
+      "sha256": "c67ee8c3dc434adb0a392aa0653941facc419e38691894e7b3cdefa785ababaf",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/reverse_templates.lms",
+      "sha256": "124e2b0f79636e37b618b6944653fcf497c680b37fd79500cc1a50ab5aa0b2fd",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/run_script.lms",
+      "sha256": "58e1c995e172841c749eae5b300d7ae4c601982de199c11859c1c28bc56e6459",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/run_script_child.lms",
+      "sha256": "f9352205482bb07ae56a57d8bb9f549955f54e5a54618956a925be6403d71fec",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/strict_access_methods.lms",
+      "sha256": "9b1657e76e282d7d70e9ccb277c6614a08cc36550c45a1392197cf8babacf9c5",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/strings.lms",
+      "sha256": "1f0d9a6957df60fc31031836393e2c517fb57b87bc1cc91cddbeba96ad91205b",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/system_results.lms",
+      "sha256": "09330d8a0193dc0a69b0971bd61e332ccaad70e1415b9cd6b341518b0cb8ac91",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/trace.lms",
+      "sha256": "ea070dd4028a58a39f3dd76651ac96a89a2d0e1d73698c8fc5fdcc5718679bd0",
+      "blocks": 0
+    },
+    {
+      "origin": "mono",
+      "path": "lmscript/examples/values_and_scope.lms",
+      "sha256": "c7d0e20fb97283461ab4fd9dd12dc200314513677d295b58c4924abd2297d037",
+      "blocks": 0
+    },
+    {
+      "origin": "lmok",
+      "path": "rules/lmcode/bash-unquoted-vars.lms",
+      "sha256": "bb390beb16ad0f5b3155ca7e8facec3444e5c6a9d819a098a714c9ac4c6a99d8",
+      "blocks": 1
+    },
+    {
+      "origin": "lmok",
+      "path": "rules/lmcode/c-cross-file.lms",
+      "sha256": "fbd3b211ba5ff02e14a620e4b13a03d8e5ca76ba54bad4c961476ed7dd92e188",
+      "blocks": 1
+    },
+    {
+      "origin": "lmok",
+      "path": "rules/lmcode/c-function-cognitive-complexity.lms",
+      "sha256": "8619b588f575c531ffffd661a8830ad71f6e766481fab910aaa09221ca336bb6",
+      "blocks": 1
+    },
+    {
+      "origin": "lmok",
+      "path": "rules/lmcode/c-function-metrics.lms",
+      "sha256": "026a4261affbc6065af08f1772defdcb022f25cfe6c48faefe8f884896ba76d5",
+      "blocks": 1
+    },
+    {
+      "origin": "lmok",
+      "path": "rules/lmcode/c-nesting-depth.lms",
+      "sha256": "0326469e09433566ede1d2b17f3599b14c5512f20c9406a2a56e8154b274c1c4",
+      "blocks": 1
+    },
+    {
+      "origin": "lmok",
+      "path": "rules/lmcode/c-scanf-width.lms",
+      "sha256": "a25e4554adc57210bee27d5465367e6c97fc377a9f2a5dcf991211e6c2d6f08b",
+      "blocks": 1
+    },
+    {
+      "origin": "lmok",
+      "path": "rules/lmcode/c-switch-style.lms",
+      "sha256": "93de7a60c6cad61c010124109ad54fc19555167ec3b32ea1fe4a154f52e2ae66",
+      "blocks": 1
+    },
+    {
+      "origin": "lmok",
+      "path": "rules/lmcode/c-symbol-rules.lms",
+      "sha256": "03627f91a5361cbb5d410926eea75be80654e74dd3b5949dfb0ca8465fd9338c",
+      "blocks": 1
+    },
+    {
+      "origin": "lmok",
+      "path": "rules/lmcode/json-duplicate-keys.lms",
+      "sha256": "6277c203143ac37c83a25eeabedd3ffe759951f37fd233c7b7401a69c328ed82",
+      "blocks": 1
+    },
+    {
+      "origin": "lmok",
+      "path": "rules/lmcode/json-duplicate-values.lms",
+      "sha256": "f7ced973745caf100bb70410a8f28f7f87c4c450e3ea59def56d7435eeadf581",
+      "blocks": 1
+    },
+    {
+      "origin": "lmok",
+      "path": "rules/lmcode/json-nesting-depth.lms",
+      "sha256": "17287effd0ec4577f9a0ba4c6b587e1439a1852bc04fffa1e645c00eed37eaa7",
+      "blocks": 1
+    },
+    {
+      "origin": "lmok",
+      "path": "rules/lmcode/json-size-limits.lms",
+      "sha256": "ad066554526ee50a1c2dd412b9d77a9c737e6e435ca9de736f28161f7d1094e1",
+      "blocks": 1
+    },
+    {
+      "origin": "lmok",
+      "path": "rules/lmcode/python-function-cognitive-complexity.lms",
+      "sha256": "88eca79d9f33ce95606d8988cadceaf409152438b8a2ad89650479e3c5af2cd3",
+      "blocks": 1
+    },
+    {
+      "origin": "lmok",
+      "path": "rules/lmcode/python-function-metrics.lms",
+      "sha256": "328eac02dc94b188b2dfc2da4838214f1e955b9563eb58e161bf24f8618fe17d",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/001-literals.lms",
+      "sha256": "ccf635607e1cdc6280a51542ee802f984a22f5bbdf41fc64e4eb17e6271e1fd5",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/002-arithmetic.lms",
+      "sha256": "3258b44e44fab6a15b37f69884a1f9d7d540a7a47c645c205afe1b9c619a8cef",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/003-boolean.lms",
+      "sha256": "5fdad5f8b72bd59f5291f69b2dbcc91ee39b497254ace7c5e91f1305d748a990",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/004-if-else.lms",
+      "sha256": "8e98663c51f21f121466a885280408c36482c2480658fc00bc164372d00a5389",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/005-while.lms",
+      "sha256": "e36e66fbb0c16d11aa54da2b473e6fd864d7d82a35f5aaec44f4c45730a75217",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/006-range-for.lms",
+      "sha256": "65a0fd2b845c217a9ca852797eb15457d92f7944d894b06749cf671b5e0db2f1",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/007-switch.lms",
+      "sha256": "e6f660db382c91a618ca88b92db541705646b2ebe7a4c9b90f7b86fcfe668a53",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/008-function.lms",
+      "sha256": "4992162f3a741a5d7467dbc617d60333fa2436298483129a54acdc3f1f509c9d",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/009-money-overloads.lms",
+      "sha256": "e58b02d961675e1cfdf70b2b81e944fadf305aeaf48b6e22d324f130606d7816",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/010-money-methods.lms",
+      "sha256": "0fb7101f63c28e84fd632abcfc9017780d16935caf75d898aa7f47047c12d8e9",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/011-money-operators.lms",
+      "sha256": "7f1b13530f63decaed4417777adb580f461b4732e7fba55c3316f0a4685997ff",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/012-shop-methods.lms",
+      "sha256": "b274a403103bc32b98eda27355b2e2cb816d994dfd26dba2d6252e81a3ca3327",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/013-items-methods.lms",
+      "sha256": "be30ab0a477df3de4d677285c3bf21a96493db68f7f5c15deb836edcf6874bf0",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/014-ledger-methods.lms",
+      "sha256": "bee3b643fb0bf8667169d7b569a847208fe9f430b79ce156888de4a0f596bc64",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/015-float-list.lms",
+      "sha256": "6569d8eeacd10c7706e88ba0167d6d78b292394dcae49de7d0b1242ee4b4fd9a",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/016-int-list.lms",
+      "sha256": "47a6aeaaf214a15694a2a9a812e029575cde30ac8e53b670f053a99c2faeec70",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/017-str-list.lms",
+      "sha256": "7201e784c62ca437b384a7f1f39a5f2adfc0675ca7d038da588691e69e6e7f2d",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/018-str-map.lms",
+      "sha256": "4d76c269e9e18641d72a3d44d244aec9d58e239ec25a8fa7f48323fd812e2764",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/019-math-int.lms",
+      "sha256": "7c5427a431ae4029926b2c48a45947de8f76f01215d4ea72f94c1d64fa7335f4",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/020-math-float.lms",
+      "sha256": "cf4958577b2ba28b41084bceaa96b0627305921c77224f53cb2d8125a845b9d4",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/021-string-predicates.lms",
+      "sha256": "635cf4d3f15dc1e4b56df90a66d3098f825e90613e05f103e7006dc8d6a97190",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/022-string-transform.lms",
+      "sha256": "7fb4f7692b49e87d870a63e70e3dcb4ce66fc59a17c60277ac9fbd6f91c233ed",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/023-string-convert.lms",
+      "sha256": "9d1791de1547f875d743f6055f158030c1f80cb46b3cd05ab85b81be37dafcfa",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/024-file-functions.lms",
+      "sha256": "aced92c60631aae530c20ae04e1f7c788fddf25c232b8483847299c7396b9ca5",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/025-assert-close.lms",
+      "sha256": "c3d2fe6bfc9d10ac2dfdb1fb4ef605f5ef3424a6bf1df1ab37033daade8c2a79",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/026-divzero-expected-fail.lms",
+      "sha256": "b0604ea6d9c019b0c0b5fd203dfe750a1ad5b006990371caf2e457bec3784ef5",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/027-modzero-expected-fail.lms",
+      "sha256": "26e061a9ebec13120e9119ed8a11a3bbbb3f79cb796067acd564db7be5f38484",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/028-assert-fail-expected-fail.lms",
+      "sha256": "a9acf787e8547e9e4b9769e04bb43a99f979d3a029dc1f8071bac5976643351f",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/029-reject-expected-fail.lms",
+      "sha256": "8e1f8532fdffd5b76d178c3d5f3c65e3d1deef4448613341cc4f65b0f0942db3",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/030-negative-balance-expected-fail.lms",
+      "sha256": "32a81bcc0cbda96d5cba4ff8454b4e58ddb3dad226d82c77e740b0524020b21d",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/031-items-oob-expected-fail.lms",
+      "sha256": "cf977c34205803501e819a5816dbbcf66caf10f81f53b0fd74210e14c41b7386",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/032-intlist-oob-expected-fail.lms",
+      "sha256": "ab54c6c6f657caa8a0a94e71bda523e38cf1f62400145ea57c983f6a2a103034",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/033-map-missing-expected-fail.lms",
+      "sha256": "cc6eb23ae3a2d985edb91bbb392af5dc250346ffebede41d4eb6966088b2dc84",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/034-money-conversion.lms",
+      "sha256": "5c2d8d9cc7d6bdc868d9fe255703b6ad7b7c618ac09b065be88b96873adde7b3",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/035-context-trace.lms",
+      "sha256": "e50e91dd18078f903c3a7c1333fb3968856f97228e1c031e438367f038cd9132",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/036-nested-control.lms",
+      "sha256": "2cca9b8cfb677a35b195165c499160586f33a18f250e601ef3cede616907d009",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/037-map-iteration.lms",
+      "sha256": "4c5019d7cf10b04213b9093e2f83b462b92393f35bd629d214f8c66939126d24",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/038-floatlist-chain.lms",
+      "sha256": "7ddd3861b80fab53251ac46f0b0a9844c5d5d823cc2dd0b4b026fb0d7de62700",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/039-enum-currency.lms",
+      "sha256": "299fcd94f112aa77c8560e5a3eac2b3bd23ec284a9c02ef7bb3c6b6dd38f1069",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/040-full-trace.lms",
+      "sha256": "5126bd36177dae9548e18d631982af2bd9f11723b2d2992d4514345f501f671e",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/041-int64-wrap.lms",
+      "sha256": "946ffc0455d388c38fea65154743949baef339b4e49f0361550baa7abaa981eb",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/042-short-circuit.lms",
+      "sha256": "2f1d73871721326fc48bbfe348620c4d42527fb3174ff9f9d3160bcf183324b3",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/043-break-continue.lms",
+      "sha256": "7ad765998c85081ad5285fc146cf969a7d5e340f62dfc132ec573d35e2340827",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/044-items-foreach.lms",
+      "sha256": "68b78a2f65be3bb03df2a6a459a880fe20f59ea80fbbae9efc0ddf40a0693f57",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/045-switch-string-enum.lms",
+      "sha256": "5e475e1d008184e7823450d5e03bc16cd8a2f751b1d4a6d4fc4b8355c0c9f035",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/046-inner-heredoc.lms",
+      "sha256": "55d06928591aa0cfd088ab2a5d2500e810cc8ace50d4f19b391e2662436962a6",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/047-outer-splice.lms",
+      "sha256": "c15528ca0924ebad0b1bedb77e6e8730c732710a5455593cb8c1b454e40b17dd",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/048-math-derived.lms",
+      "sha256": "36d57d75216f47daa76b375f19e0d304f20518dab998768465f224bcb41cc150",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/049-int-boundary.lms",
+      "sha256": "633caa7713c0d9e54cd968aeb7c27861dfc6e496f82d76e7dbcf371014d150bd",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/050-float-boundary.lms",
+      "sha256": "45efdd10eae0cb33261869612292ba8fc8361284ddb82f6a5699faec6209484f",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/051-bool-boundary.lms",
+      "sha256": "98092f60ec9bc5df84629fc8091d3bf6cb3d89509096a4003f32274405db2321",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/052-byte-boundary.lms",
+      "sha256": "1d062efde5b78ef73dedb2fea16104bdba60fd0db162aa2223760b173699540a",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/053-file-invalid-utf8.lms",
+      "sha256": "d4b557054aabd45af622599aea356c5fd10db82738d52e7f6b344ba890f4e856",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/054-megabyte-string.lms",
+      "sha256": "a2f0cba932c62b0ca344edcd62acbb2d8ecb09ac8c6f360622cadb348ce19715",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/055-object-handles.lms",
+      "sha256": "59437878684a9b906d9d594c2e5dd1cd7bd11746fb4546dbf47a54eed0e160a7",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/056-collection-boundary.lms",
+      "sha256": "8a0d2fa5f75562a9625640e6ce75fe810b8017c1ecfb0b3168cef4be15f0638d",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/057-nested-inline-error.lms",
+      "sha256": "b460fa44bd02f72359b779669f48ced1c7dfbd06a005e40ab6fc57926a6da834",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/058-million-loop.lms",
+      "sha256": "492afe251415b3fd37cb1e0aad6b12e286b20a447784092a5843a90455b934a0",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/059-deep-inline.lms",
+      "sha256": "46fecc8f369b2e45abccfb3d520a189c14cdd51b00461a3ed59b06ce506cc690",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/060-many-arguments.lms",
+      "sha256": "b5acb64912bae64bbfd598a872229fa511b347684cba9bca3e16c9232548502b",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/061-long-identifier.lms",
+      "sha256": "5b78d9d6a08b6d55e8e75d40ba81ef8d3161bdff4197d8a2b5d0ce2cda002f6a",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/062-null-receiver.lms",
+      "sha256": "d33cf0e5d296216d82e3bcde6cf2365ce87db46657b86c345bc1b3a7c1fd4188",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/063-wrong-runtime-handle.lms",
+      "sha256": "8d2d3db6ae2ccf18c9de9f88c3d05deb8999a646d596b0e4fb85712c37555735",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/064-money-invalid-float.lms",
+      "sha256": "8ff7cc2297c376469da9f850e5ccda93fa996dd524fb42944a9e56f2601b1a0a",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/065-price-invalid-float.lms",
+      "sha256": "9087d745a02c0ea141a62ef2e3738ad90d23d9a418c3eae809ff282030240618",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/066-record-null-money.lms",
+      "sha256": "be63ba4c3b4f5ae2ca32311c30c52262e7d00ae10d341b4fa83704d6e9623343",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/067-rule-methods.lms",
+      "sha256": "d4bb8e6472020fe8d008f325be6d436025506b6073cd11f6263e9e4ebdef9d90",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/068-rule-entries.lms",
+      "sha256": "2e3c46f20c76d18091cd7b8f800b1059b2794cca9669d37bbb182be139d9d18c",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/069-rule-value-entry.lms",
+      "sha256": "00120cd86a614e7dcb5a20ac8dee2272d8dcc94fee2070d7461e5f724bb7179c",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/070-empty-reversed-range.lms",
+      "sha256": "e8335e295aae0ef5c03a943398aac8c29c4a4c1e0a66e61cfd2fffeb02482e8a",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/071-nested-loop-control.lms",
+      "sha256": "42740729acb449d58c7e79677701ea1db93cad74e99f3baeeecf063f91f1966b",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/072-switch-no-fallthrough.lms",
+      "sha256": "ce676583e778566e28b086c3152103e60d63c3038f3119d8df0f312ea3f54837",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/073-inline-local-isolation.lms",
+      "sha256": "9fd1cbcb74feb418062920715e56624b6e5702d33a94d7542e12966d5b306af9",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/074-unicode-splice.lms",
+      "sha256": "e0ea679a97edb22d6309b6970ed84ee03da0fbadfe1852d9a5ad07a3dc9b79c7",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/075-empty-collections.lms",
+      "sha256": "5c14c02ddb72271d1bd01bc5b555475def74b377d701adf8b185d08828ffb0cb",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/101-typed-maps.lms",
+      "sha256": "0e1794979c3cafb7b3f1ffb7af23a4b41ca6515fdafdab816fe5a575d20e712b",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/102-int-containers.lms",
+      "sha256": "64f4933ad379da9d741ceace16d18cb187ed9ca66786b0387104bc129e98c0e0",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/103-float-containers.lms",
+      "sha256": "c0f0210b6381c043e238c650593266741431d60290172f74177c84fd31058522",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/104-str-containers.lms",
+      "sha256": "665026c543a4337ad1093c7bcf8c585c3286ad1f8b22db02fa4fc76213583fa3",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/105-json-navigation.lms",
+      "sha256": "ecdf025dc68a2dfce5db17fd6b83a0bbd78aa69e9396cf5ac873865138513a09",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/106-stack-empty-expected-fail.lms",
+      "sha256": "6f113f5710dd1b29a5a2fbeed77e3f77278f3562f2cbf4816d9a594a6cbb0d0a",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/107-pq-priority-expected-fail.lms",
+      "sha256": "87666c0e45eb10a8db5218b5c8a3d507e712b3f97e5f89cfdc71b2d492eb02e8",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/108-json-kind-expected-fail.lms",
+      "sha256": "420e4e84973ce7894233cfe30f6e06d17c32caa46517681e11ee44f9d7a8e98c",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/201-word-literals.lms",
+      "sha256": "38ee1154da2f6b4f4ebf81b08b9f18c6b6299dc3710ea0d12f070c38cd208d82",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/202-number-literals.lms",
+      "sha256": "d4e257aa0c3210b85178f1f9aa03db2806e5063324c139fa70e56bfba896cb0c",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/203-map-literals.lms",
+      "sha256": "6f2a2bd6a3adf0892a161d97b4bc5197525c61a5fb21af5e3599537478db9ad2",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/204-json-literal.lms",
+      "sha256": "97beaa63987c6e302e60069b22e9d800ce014c1863966eee6182fcc9a30846f3",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/205-literal-bindings.lms",
+      "sha256": "d0acaa6099d322d52ef4ee5e20c2abcfe8bea219e3001ca9b1882177387bf338",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/301-byte-codecs.lms",
+      "sha256": "366dfec1e7bbb7ac0fb05703dec2e2cf2ee89db973c2dcdabea9dedc37772f25",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/302-map-string-snapshots.lms",
+      "sha256": "b33804ba565183b9e3872ed4e452e02eca7e35852299e61ebb04abb13792f865",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/303-map-number-snapshots.lms",
+      "sha256": "25aa123482225c292d35e62a2b2f3f23be7bddd96ba83a3d67200d0cd0b0e459",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/304-base64-invalid-expected-fail.lms",
+      "sha256": "76a67e8d50f69cf6784233d0f54ee6dd65d3710f66cfc713a3f111d0b7b416a7",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/305-hex-invalid-expected-fail.lms",
+      "sha256": "3ff545173ba70a294b091c6fb5bb0b2a80079e9e31b0bd3bf21a5cd23bab4ae0",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/311-byte-codec-boundaries.lms",
+      "sha256": "f7b733ae6ac9888c323de8075b2d1ed7e7bfcbcc7e5120eb5e94358b0ae83ace",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/312-map-snapshot-mutation.lms",
+      "sha256": "2db2732dd32dbb2e3b6aeb265eb36108f4c9289a2457d044c130c1351d8f3f7c",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/313-codec-pad-bits-expected-fail.lms",
+      "sha256": "1908093c78f9c8468d1b68a54b8ae784a8c2590f445a8fa17f9c98e53ab61093",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/320-text-template.lms",
+      "sha256": "6cfb71e9f807b30e5b759ba5a6d691e5de2553e703ba7dfa76195bea2639002a",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/321-template-missing-expected-fail.lms",
+      "sha256": "f3e6c8318c9e77c9892c6f455289011143e7e157ddca0f77820515ca1c45ed95",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/322-template-bounds-expected-fail.lms",
+      "sha256": "e20b2cec1da5472ceabe68cce297d166535db8b97b4590a175f3d07cc148ed26",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/323-template-canonical-index-expected-fail.lms",
+      "sha256": "37c33a7cdf8a3201f4af0da4f9d6735fdbffa7fe531c4ff077e9e1723ccb551f",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/324-template-wrong-parent-expected-fail.lms",
+      "sha256": "e69b3b7b9dc7aacb9439d8b7a67abe026779bfe6f6f2a52337cd8466cae85fa8",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/325-template-list-required-expected-fail.lms",
+      "sha256": "dff75d2fdc95b755ea8f086ee3dba5484267160111c73cbabc9c9bf02075dcce",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/326-template-bool-required-expected-fail.lms",
+      "sha256": "7fd3a0f10b73d5b6d0adfcb01baa89f8e97aab51eeb65e0b83e9283487db668b",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/327-template-context-object-expected-fail.lms",
+      "sha256": "26fdb9c5e817cb4514e2592d88e7aeb7d906f21767c5028329d07d46b862c2bf",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/328-template-unclosed-loop-expected-fail.lms",
+      "sha256": "f02a98dc064d0821f46beae75bb6adfc591711d0a6c6e3ba0d58d2c6ad074554",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/329-template-unclosed-condition-expected-fail.lms",
+      "sha256": "7428f8eef65dc1d7359aa4d39234f091bdb45c1012ac64ce2f84888240ab26cd",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/330-template-unexpected-else-expected-fail.lms",
+      "sha256": "053488ddb2835ea4d44c8b9e2df58d916b1939f6207d712d10d2ba040318d12a",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/331-template-invalid-separator-expected-fail.lms",
+      "sha256": "11f5e34183a8b1f4c072130eb633a870d8062b6a3800dc266864bca233ad4043",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/332-template-index-reserved-expected-fail.lms",
+      "sha256": "c8dd4884cb07702206e79dba87e8ea7a794a5d46f5efc5c6f1d6e279f476408b",
+      "blocks": 1
+    },
+    {
+      "origin": "cpp",
+      "path": "sample-suite/programs/333-template-validate-empty-body-syntax-expected-fail.lms",
+      "sha256": "fcaf6706f3d0e741e39f1ba1d1235c41d09e135ae1630b9f576e40f5a661b19a",
+      "blocks": 1
+    }
+  ],
+  "cases": [
+    {
+      "file": "mono--01_dsl_heredoc--0.lmcode",
+      "origin": "mono",
+      "source": "lmscript/examples/01_dsl_heredoc.lms",
+      "block": 0,
+      "line": 5,
+      "sha256": "2d8b68dc6dfcc0d2de1e13d6c885200bb47599204027886aca40a52c9d968a4d"
+    },
+    {
+      "file": "mono--config_consts--0.lmcode",
+      "origin": "mono",
+      "source": "lmscript/examples/config_consts.lms",
+      "block": 0,
+      "line": 21,
+      "sha256": "35e20b6ca8496755dc0537262828022f09686cd2e84da5e7e36195b17caaa399"
+    },
+    {
+      "file": "mono--config_consts--1.lmcode",
+      "origin": "mono",
+      "source": "lmscript/examples/config_consts.lms",
+      "block": 1,
+      "line": 29,
+      "sha256": "c4c1061a0925710a9f3c1f594081a7a31bf46f71c3179004993d69b9906d20af"
+    },
+    {
+      "file": "lmok--bash-unquoted-vars--0.lmcode",
+      "origin": "lmok",
+      "source": "rules/lmcode/bash-unquoted-vars.lms",
+      "block": 0,
+      "line": 16,
+      "sha256": "eb689990072a91722c33faf693660bfcd11f36be51c2e8e9b14c2d6aef0752e1"
+    },
+    {
+      "file": "lmok--c-cross-file--0.lmcode",
+      "origin": "lmok",
+      "source": "rules/lmcode/c-cross-file.lms",
+      "block": 0,
+      "line": 17,
+      "sha256": "3aaab38d481bc8e86a0597565134b069fcabad4986457f72a505696b429f0e4e"
+    },
+    {
+      "file": "lmok--c-function-cognitive-complexity--0.lmcode",
+      "origin": "lmok",
+      "source": "rules/lmcode/c-function-cognitive-complexity.lms",
+      "block": 0,
+      "line": 5,
+      "sha256": "0295305278b5010167105acd413d76aa7b9c3be207112894802a71f7f2709334"
+    },
+    {
+      "file": "lmok--c-function-metrics--0.lmcode",
+      "origin": "lmok",
+      "source": "rules/lmcode/c-function-metrics.lms",
+      "block": 0,
+      "line": 16,
+      "sha256": "43a3ab7684018d9b3c0e454140e0ba4157eddacbd6a3927f24099fe8f9f9c2c2"
+    },
+    {
+      "file": "lmok--c-nesting-depth--0.lmcode",
+      "origin": "lmok",
+      "source": "rules/lmcode/c-nesting-depth.lms",
+      "block": 0,
+      "line": 16,
+      "sha256": "651e38dcecc516d172c73220e4ccfabe58c9dd6c95f545a5e53dfe6c442454d9"
+    },
+    {
+      "file": "lmok--c-scanf-width--0.lmcode",
+      "origin": "lmok",
+      "source": "rules/lmcode/c-scanf-width.lms",
+      "block": 0,
+      "line": 14,
+      "sha256": "37f028763ceb43fa0bbf2c7f721a4c0288373711b47bb2332466634abd54e95f"
+    },
+    {
+      "file": "lmok--c-switch-style--0.lmcode",
+      "origin": "lmok",
+      "source": "rules/lmcode/c-switch-style.lms",
+      "block": 0,
+      "line": 17,
+      "sha256": "a5f79374c976ebcd9b4ea3cc9ccee8f036cdd5edb60179243b69648f660eeeb1"
+    },
+    {
+      "file": "lmok--c-symbol-rules--0.lmcode",
+      "origin": "lmok",
+      "source": "rules/lmcode/c-symbol-rules.lms",
+      "block": 0,
+      "line": 19,
+      "sha256": "3e4188c866821500d41a9d8a7c03040d33a3a379a7e16d1901a806153abce913"
+    },
+    {
+      "file": "lmok--json-duplicate-keys--0.lmcode",
+      "origin": "lmok",
+      "source": "rules/lmcode/json-duplicate-keys.lms",
+      "block": 0,
+      "line": 17,
+      "sha256": "44239383df91500ce2627eb216ca707cc6b926154696e5c37302b2af5eda8f37"
+    },
+    {
+      "file": "lmok--json-duplicate-values--0.lmcode",
+      "origin": "lmok",
+      "source": "rules/lmcode/json-duplicate-values.lms",
+      "block": 0,
+      "line": 15,
+      "sha256": "029b813acdc600debaa8e13c0ce83086ec1c83e59dc57a7a2ce36cbdc1a92e10"
+    },
+    {
+      "file": "lmok--json-nesting-depth--0.lmcode",
+      "origin": "lmok",
+      "source": "rules/lmcode/json-nesting-depth.lms",
+      "block": 0,
+      "line": 16,
+      "sha256": "553ed30d85f915c0059466b021d0699859ac30ba6e226d1004b338196f2f5730"
+    },
+    {
+      "file": "lmok--json-size-limits--0.lmcode",
+      "origin": "lmok",
+      "source": "rules/lmcode/json-size-limits.lms",
+      "block": 0,
+      "line": 12,
+      "sha256": "561f3e7bf7c404b1c1aefa5799ad5f7059e2c8449008812cc2af3e8e302c21ef"
+    },
+    {
+      "file": "lmok--python-function-cognitive-complexity--0.lmcode",
+      "origin": "lmok",
+      "source": "rules/lmcode/python-function-cognitive-complexity.lms",
+      "block": 0,
+      "line": 5,
+      "sha256": "2b5b60a7389af57d70cb83dc65d73c4ad003a4cc528e7a62628cb797811be9b0"
+    },
+    {
+      "file": "lmok--python-function-metrics--0.lmcode",
+      "origin": "lmok",
+      "source": "rules/lmcode/python-function-metrics.lms",
+      "block": 0,
+      "line": 16,
+      "sha256": "fc026514b67fd0a4d265cc8cf6c60d715d4d884424a387b8bd57a044c3f65259"
+    },
+    {
+      "file": "cpp--001-literals--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/001-literals.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "93d24ab87654b48847c46e603ee39883a4f158de70bb575b426f223e119d42ae"
+    },
+    {
+      "file": "cpp--002-arithmetic--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/002-arithmetic.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "9371f2c5b864ba498f0ce81e1264406b2a7dbf3cab7546493b7aee9ae301118b"
+    },
+    {
+      "file": "cpp--003-boolean--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/003-boolean.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "a32c99b98d6227795bc09a5bf08665f4e78ffab0ff01f80f9e9ff551d569b461"
+    },
+    {
+      "file": "cpp--004-if-else--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/004-if-else.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "ef8c3cb4492396e22487c789c39f8a09603af19485436e5a2282a3264225f4fe"
+    },
+    {
+      "file": "cpp--005-while--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/005-while.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "73fff2f5f23a04ed72387d629c8b385feb64a0fc34219483246c98e980312418"
+    },
+    {
+      "file": "cpp--006-range-for--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/006-range-for.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "7d515982b712feed53e44acfe11b71e822fbac736a9abe5c7c6ed0fea7b18443"
+    },
+    {
+      "file": "cpp--007-switch--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/007-switch.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "510cb1803a558bf8fbc164e33a14607590ab8125ec9f7222dad7d26c73bc0d7d"
+    },
+    {
+      "file": "cpp--008-function--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/008-function.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "c89b0243077c228993ace14484256c5338b2001fc590a3783f5b8d8e8c0ccdc6"
+    },
+    {
+      "file": "cpp--009-money-overloads--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/009-money-overloads.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "f49b858f9811299f99d5d2044d9818a8dd96addf85158a87335296ef34243416"
+    },
+    {
+      "file": "cpp--010-money-methods--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/010-money-methods.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "d4b59dc40ce83119d89523d4f97a62601feae34dcb12c32f692a94a7b16e9670"
+    },
+    {
+      "file": "cpp--011-money-operators--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/011-money-operators.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "eb15d8de8b5835db30eb85180a650e89bb029699f16787a1a865b3fec32f47d1"
+    },
+    {
+      "file": "cpp--012-shop-methods--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/012-shop-methods.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "faf26c5872e2e17b50e8e20d41028e88a619f3d4a9ed2fa092f10167f792dc32"
+    },
+    {
+      "file": "cpp--013-items-methods--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/013-items-methods.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "dc93d27322e599ac0978eae726e5c715fc9e82041e74fad85d93d5cfce5e2e27"
+    },
+    {
+      "file": "cpp--014-ledger-methods--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/014-ledger-methods.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "d3755e1c6e4e9e36ecf24af3f05cbaea29422e53dd8517b8a01751651283d0e5"
+    },
+    {
+      "file": "cpp--015-float-list--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/015-float-list.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "c3741d0553a3c402c1c327c5ce902a4536791b45a7e96e121eef1f750dbdb234"
+    },
+    {
+      "file": "cpp--016-int-list--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/016-int-list.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "1dede1807693a026f0f11cfbf2bda66e3e4819a1234559c54c43387d9e82c14a"
+    },
+    {
+      "file": "cpp--017-str-list--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/017-str-list.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "2c3f91fac8aac3187613d9ccc285c047a1cafa08d18edd75e4f9e41da9a9591e"
+    },
+    {
+      "file": "cpp--018-str-map--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/018-str-map.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "b91247314ac3a054d4132d15763f5701a9557c31e54ab8420e2cfc96149ac623"
+    },
+    {
+      "file": "cpp--019-math-int--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/019-math-int.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "23ad38636028282c12afb63819223bd3cfd6ef074cfd5a6317e8ecd2e7e8ef56"
+    },
+    {
+      "file": "cpp--020-math-float--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/020-math-float.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "5a33af5db723e04293af0cd136d1e6e59d8ef677ea9b993ce3d78e48af0ed3f7"
+    },
+    {
+      "file": "cpp--021-string-predicates--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/021-string-predicates.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "6f4395a398bdc426d9e630411a0fe69100bd90ba0f6ff20e380a98952884c167"
+    },
+    {
+      "file": "cpp--022-string-transform--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/022-string-transform.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "8592bbf83ea2582f0795a9036a42e622ecd0bce774ed2fc25eb380115bbe5b98"
+    },
+    {
+      "file": "cpp--023-string-convert--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/023-string-convert.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "ff4bbd3b71beea685f183a4e7499224b0bb8b8869b78f1c5ed216067713cd3be"
+    },
+    {
+      "file": "cpp--024-file-functions--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/024-file-functions.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "3204d32a9c537d0e9ee58e3858d3029baca3807bbe4699e5b2b2c6e4a1881b41"
+    },
+    {
+      "file": "cpp--025-assert-close--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/025-assert-close.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "ce8327ae89881278354dade6a8058c26417d6e20bfaff6915b49fbfc72262615"
+    },
+    {
+      "file": "cpp--026-divzero-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/026-divzero-expected-fail.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "990d4ef283f3caf1a3d9c4d2b72e626c20c241eb15a9b66db945963ba9f87485"
+    },
+    {
+      "file": "cpp--027-modzero-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/027-modzero-expected-fail.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "d111d23027cd357ac4d7b8059a0092ed311ae89957f4319ca50aedbcbd1b527e"
+    },
+    {
+      "file": "cpp--028-assert-fail-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/028-assert-fail-expected-fail.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "d7a0cf8b5f7ef42743b0af3b89cad55cafc6ecf34c94856dfaaedcc400daea91"
+    },
+    {
+      "file": "cpp--029-reject-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/029-reject-expected-fail.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "bf199e8c14be3927fd0860b9fa39d75ce9705bcabaf4f5e387df2de910a29218"
+    },
+    {
+      "file": "cpp--030-negative-balance-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/030-negative-balance-expected-fail.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "38fb11e17f6b571695173afef1605d2d7f6e25345c34588b0f4e01e8588d17b1"
+    },
+    {
+      "file": "cpp--031-items-oob-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/031-items-oob-expected-fail.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "7d7241a2566dd04d91ffc5efbfaedacdf191fa9d8dcac01bae5eae0114943e50"
+    },
+    {
+      "file": "cpp--032-intlist-oob-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/032-intlist-oob-expected-fail.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "93e6c1ec0fef546a108f0dfd11adf8d686e9c97a9b71e5d9602460797927c111"
+    },
+    {
+      "file": "cpp--033-map-missing-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/033-map-missing-expected-fail.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "dcf83461ae93d3b9e7923380f2bbc03ce2098fa6cb26f6aa3f57aae81665255b"
+    },
+    {
+      "file": "cpp--034-money-conversion--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/034-money-conversion.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "d43db125491dac8409bf6d87cf78dfd4436a95f2661745a7898f5375c0605fff"
+    },
+    {
+      "file": "cpp--035-context-trace--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/035-context-trace.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "9e21578781acc7b216acd06bcaf1eb1e0329c2d593db4633c39907c8e77991c0"
+    },
+    {
+      "file": "cpp--036-nested-control--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/036-nested-control.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "7130dc8cf9ea26a20575d93070f317248d1dfbebe06cb23cd4550d532c1dd391"
+    },
+    {
+      "file": "cpp--037-map-iteration--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/037-map-iteration.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "9ed5bbcf9e7dc7411e74172f8963775d371da0bfc6d4a6a8d88c32b3faac16c6"
+    },
+    {
+      "file": "cpp--038-floatlist-chain--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/038-floatlist-chain.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "28acc965e18f6b3429efb95f35555ebba5514ffc8d7a4e7effee1eeb442eb3ac"
+    },
+    {
+      "file": "cpp--039-enum-currency--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/039-enum-currency.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "aba18ec6c78c13606a23834b00aff5d60f595d59dc18e45b6626e36120330f9f"
+    },
+    {
+      "file": "cpp--040-full-trace--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/040-full-trace.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "2458d64547191a6a7c29f206c97ee84a7d851e4c2689bbd657d8fd4357827b0a"
+    },
+    {
+      "file": "cpp--041-int64-wrap--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/041-int64-wrap.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "f4322d7fa7f73fa11a3af7be700c880563b15a5616cc0c52914d9151dba0740a"
+    },
+    {
+      "file": "cpp--042-short-circuit--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/042-short-circuit.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "b88e64b0e6faa63d85e141a444540998e7fb15053a6f9ca462ad9f90324b2e19"
+    },
+    {
+      "file": "cpp--043-break-continue--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/043-break-continue.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "02d8ed1a6b209a2bef74202073b211b7ed5c2678a760956daebed96f7356f937"
+    },
+    {
+      "file": "cpp--044-items-foreach--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/044-items-foreach.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "fc8c4a52b3b30d3a96affab6ab20acc24fc86637404bf42a4170882bba151b56"
+    },
+    {
+      "file": "cpp--045-switch-string-enum--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/045-switch-string-enum.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "4f615dfa2f599793004430ad2e7328ef6a4d1a999266aee91f10406c88950697"
+    },
+    {
+      "file": "cpp--046-inner-heredoc--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/046-inner-heredoc.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "509faeac3144a010b57f416ccdf552d7fb31d996b32159bbad2c81e53f764465"
+    },
+    {
+      "file": "cpp--047-outer-splice--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/047-outer-splice.lms",
+      "block": 0,
+      "line": 6,
+      "sha256": "994b7511fb4cd6868748a5f6c9d9f101b5dff58648b57914536c1f2f9fc9e3f5"
+    },
+    {
+      "file": "cpp--048-math-derived--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/048-math-derived.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "6d04e6b4020623522335d2d6c8e1f8c8bf6c8dccd862e894e04319728d3b1a55"
+    },
+    {
+      "file": "cpp--049-int-boundary--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/049-int-boundary.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "42cc4ff5851d113c7a0e4aeac262cb47f4388cb8d87b0730f55866a4a541dbe5"
+    },
+    {
+      "file": "cpp--050-float-boundary--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/050-float-boundary.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "2b425284a180dd95542d7514facfcd60d3a76451b67198ccb2ae372d44989bbe"
+    },
+    {
+      "file": "cpp--051-bool-boundary--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/051-bool-boundary.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "3e3ba31b648ccc3fb84a27224aef13f709beea620dd382a2d7db5396b94fe6ca"
+    },
+    {
+      "file": "cpp--052-byte-boundary--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/052-byte-boundary.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "5dc7a528a5c8c38a7e19f5d8fc4ab97badeb0ede91938656f91e42860c7999a0"
+    },
+    {
+      "file": "cpp--053-file-invalid-utf8--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/053-file-invalid-utf8.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "695354f007d85fdfdcc3bd532af9a6039eae6920afb8149f7252ffd2067aa519"
+    },
+    {
+      "file": "cpp--054-megabyte-string--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/054-megabyte-string.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "60bfae4a83f2ac46764912decff52787b47c5e26f63037991923edc6a361ec9b"
+    },
+    {
+      "file": "cpp--055-object-handles--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/055-object-handles.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "28e4e513903704949a41ffb28d913d6bdb17c1afb014294de24b8d623f13105a"
+    },
+    {
+      "file": "cpp--056-collection-boundary--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/056-collection-boundary.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "67f8456470fea47ed57fce4a4ec14f179e02b633112765be269a2c04b5a58b57"
+    },
+    {
+      "file": "cpp--057-nested-inline-error--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/057-nested-inline-error.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "f5794b4d075afabbdaa717493d3448e02c32b2d6da78f1d03d257cbfeb78b55a"
+    },
+    {
+      "file": "cpp--058-million-loop--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/058-million-loop.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "dad308b66219f6aded285352af4b86306288cfc0a2885f2a101e9583001f9970"
+    },
+    {
+      "file": "cpp--059-deep-inline--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/059-deep-inline.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "bf02ef1c2c98e8fe298fc0109aaf9a0265c9fc293dbb1b81edb9417111a576a2"
+    },
+    {
+      "file": "cpp--060-many-arguments--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/060-many-arguments.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "885cee3ddcb8fe0bc84c2a0a29baa728abe46913620cba84327a6e60094eaf69"
+    },
+    {
+      "file": "cpp--061-long-identifier--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/061-long-identifier.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "ddaeaec09b8cd80c7c23cad87fabe6e666b92b56d4d85bffe02d5e76f1575d90"
+    },
+    {
+      "file": "cpp--062-null-receiver--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/062-null-receiver.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "4e49722a764e6e964ee5e8830f47340f711c30dd8f947b12e1fbd0deb94848a8"
+    },
+    {
+      "file": "cpp--063-wrong-runtime-handle--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/063-wrong-runtime-handle.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "763de1f66667bb1e48c4bf2a08dfdee2989d476778a288302a922eaefd11b6fe"
+    },
+    {
+      "file": "cpp--064-money-invalid-float--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/064-money-invalid-float.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "6eb06b7f04d070eaf19546d0d1abe486515fcd5a9195156e24ce7bf6b7461dba"
+    },
+    {
+      "file": "cpp--065-price-invalid-float--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/065-price-invalid-float.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "f8828f4f95dabfe31a439b26ecf2dd7a398d8f96c3c6b3a3eadd53881bb48a9b"
+    },
+    {
+      "file": "cpp--066-record-null-money--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/066-record-null-money.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "24ed7cf9a738fb5ddd20a14812a10f76b55364e6439b056cd8c107f8a50aaa3b"
+    },
+    {
+      "file": "cpp--067-rule-methods--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/067-rule-methods.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "076b7d1e254afaae228dc0b71fb0e9c3976fd5c0d7379ce80787721fbab47020"
+    },
+    {
+      "file": "cpp--068-rule-entries--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/068-rule-entries.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "7a023ca2f2f18d72587e77583a4c91507e8b0e27c705aaba194122cdc1b473bc"
+    },
+    {
+      "file": "cpp--069-rule-value-entry--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/069-rule-value-entry.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "d88f5450015d5e1e4a14a4bb8024e99245890b86ab5db19e13bcfb86c902a7fd"
+    },
+    {
+      "file": "cpp--070-empty-reversed-range--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/070-empty-reversed-range.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "75a9d2794ed9766bd8f838ded5e9fa64cf344053fdcaefd8c6d34a126f1b7299"
+    },
+    {
+      "file": "cpp--071-nested-loop-control--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/071-nested-loop-control.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "e24187367c3b4b63497db80fe1862734f31403eb7a011b3e2dda6a422ec3f222"
+    },
+    {
+      "file": "cpp--072-switch-no-fallthrough--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/072-switch-no-fallthrough.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "0dc6edeb838fe41d489c8f3813555c28c87047762b2e2876f6fffd80f59c6cde"
+    },
+    {
+      "file": "cpp--073-inline-local-isolation--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/073-inline-local-isolation.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "9d4ae1a114569313347990f3f614e775287af57f2cc00fff7fbf86fc2f886904"
+    },
+    {
+      "file": "cpp--074-unicode-splice--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/074-unicode-splice.lms",
+      "block": 0,
+      "line": 3,
+      "sha256": "5b5b6ea4dea9ab1003c898bfbc32585f4078d5d92881b63d0830a9b3e33a237f"
+    },
+    {
+      "file": "cpp--075-empty-collections--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/075-empty-collections.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "b998c27ef70c951ce83452905e1a5e399ef50e0fed45a4f119c3864683f8c64a"
+    },
+    {
+      "file": "cpp--101-typed-maps--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/101-typed-maps.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "9b80b9b3f0026d9a2680db066982d1452e0aa6bc9076fe204346c74af47290e5"
+    },
+    {
+      "file": "cpp--102-int-containers--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/102-int-containers.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "1880a61afc137c79a4fc533b3ff87085df30f307b6fea144fd5c328a30f67664"
+    },
+    {
+      "file": "cpp--103-float-containers--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/103-float-containers.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "601d3bcc37a4cf8aa4b729bce6e165c8dccb98a971833157a9c773c16d3c2ada"
+    },
+    {
+      "file": "cpp--104-str-containers--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/104-str-containers.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "9661d4d12ecde0d28f1eca1dd6b746b9815016decf682c013d17e14b15ba9fb8"
+    },
+    {
+      "file": "cpp--105-json-navigation--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/105-json-navigation.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "fc142b56d45b04219781e9b3ecdff9d2fac63539a52fba9f57a4d1318f7f90f0"
+    },
+    {
+      "file": "cpp--106-stack-empty-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/106-stack-empty-expected-fail.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "e539118187b8b293416f84eb6d8a6eba837fedb6ed79a195212a801816515364"
+    },
+    {
+      "file": "cpp--107-pq-priority-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/107-pq-priority-expected-fail.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "7df8273d953edcbdfd87ae534f604ee99598c1a0acf04f9226e8fcc57cba4f44"
+    },
+    {
+      "file": "cpp--108-json-kind-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/108-json-kind-expected-fail.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "53bab68b7a749aac8e0974bdce39671b590331fcdb4437f5b82e8250f1495735"
+    },
+    {
+      "file": "cpp--201-word-literals--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/201-word-literals.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "dd52588fb6fad724ab2f5e6588c8e7f80cc3d491bed6c7c4c12b4699e1303005"
+    },
+    {
+      "file": "cpp--202-number-literals--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/202-number-literals.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "19b0487cb7ed928d893af2a3e9d4a1ae0aec3d6c83cd71d3946a0b04ace095a3"
+    },
+    {
+      "file": "cpp--203-map-literals--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/203-map-literals.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "ba55ac18a9564cf2bd1ba4f65e3192bc54a5e5f0b0b8145889ded9018107d296"
+    },
+    {
+      "file": "cpp--204-json-literal--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/204-json-literal.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "7f6ef6efb9c46406dc18c31472a759abec4a0f7fb959bcb6c0eff2f3307ed38d"
+    },
+    {
+      "file": "cpp--205-literal-bindings--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/205-literal-bindings.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "2166e25b45383ddb10374f944ba2fbac8637af1667406f2e4613f9a78dab5500"
+    },
+    {
+      "file": "cpp--301-byte-codecs--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/301-byte-codecs.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "085fd784fcfd63c2b1a29e90f06b23ab78026bd72a2f01c3cc648604902ce8f2"
+    },
+    {
+      "file": "cpp--302-map-string-snapshots--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/302-map-string-snapshots.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "4b8626f1cceaf6de62684f22da18bef39b134744bd7d2ef8b3903e41d9e0348b"
+    },
+    {
+      "file": "cpp--303-map-number-snapshots--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/303-map-number-snapshots.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "26910a7ff9ec35b0e7e00beddd336798f444acb77c734f34d9d01e92e073960c"
+    },
+    {
+      "file": "cpp--304-base64-invalid-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/304-base64-invalid-expected-fail.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "2ac48114bb81a31a7da19627425a77a845f05f3f332c856fbc52c013adec7b55"
+    },
+    {
+      "file": "cpp--305-hex-invalid-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/305-hex-invalid-expected-fail.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "82b8cf0f1f0ef79bafdf107b53f7169a135584903fa9c2a4dbe14fc44d892b17"
+    },
+    {
+      "file": "cpp--311-byte-codec-boundaries--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/311-byte-codec-boundaries.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "96a1be85521808e796bbb88a924d814d94151f991de0489351cd534176077616"
+    },
+    {
+      "file": "cpp--312-map-snapshot-mutation--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/312-map-snapshot-mutation.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "3bc0c991d4a4dc182c5cecd2b48c6ce5498f9117ae5df73db3f62c856a523062"
+    },
+    {
+      "file": "cpp--313-codec-pad-bits-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/313-codec-pad-bits-expected-fail.lms",
+      "block": 0,
+      "line": 2,
+      "sha256": "5e893e66a0d26a6817c11bff8be0693dd177b514baf83ecc2081fdbf328c8dc1"
+    },
+    {
+      "file": "cpp--320-text-template--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/320-text-template.lms",
+      "block": 0,
+      "line": 5,
+      "sha256": "c18ad487f2984598d8a96517d1c02d161732a893c643d855a55efe1f6ff319ff"
+    },
+    {
+      "file": "cpp--321-template-missing-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/321-template-missing-expected-fail.lms",
+      "block": 0,
+      "line": 4,
+      "sha256": "e7910f39205ab17d08d36a9f405b3077eecca9871dc483dfaa3a798509d8cd19"
+    },
+    {
+      "file": "cpp--322-template-bounds-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/322-template-bounds-expected-fail.lms",
+      "block": 0,
+      "line": 4,
+      "sha256": "e7910f39205ab17d08d36a9f405b3077eecca9871dc483dfaa3a798509d8cd19"
+    },
+    {
+      "file": "cpp--323-template-canonical-index-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/323-template-canonical-index-expected-fail.lms",
+      "block": 0,
+      "line": 4,
+      "sha256": "e7910f39205ab17d08d36a9f405b3077eecca9871dc483dfaa3a798509d8cd19"
+    },
+    {
+      "file": "cpp--324-template-wrong-parent-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/324-template-wrong-parent-expected-fail.lms",
+      "block": 0,
+      "line": 4,
+      "sha256": "e7910f39205ab17d08d36a9f405b3077eecca9871dc483dfaa3a798509d8cd19"
+    },
+    {
+      "file": "cpp--325-template-list-required-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/325-template-list-required-expected-fail.lms",
+      "block": 0,
+      "line": 4,
+      "sha256": "e7910f39205ab17d08d36a9f405b3077eecca9871dc483dfaa3a798509d8cd19"
+    },
+    {
+      "file": "cpp--326-template-bool-required-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/326-template-bool-required-expected-fail.lms",
+      "block": 0,
+      "line": 4,
+      "sha256": "e7910f39205ab17d08d36a9f405b3077eecca9871dc483dfaa3a798509d8cd19"
+    },
+    {
+      "file": "cpp--327-template-context-object-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/327-template-context-object-expected-fail.lms",
+      "block": 0,
+      "line": 4,
+      "sha256": "e7910f39205ab17d08d36a9f405b3077eecca9871dc483dfaa3a798509d8cd19"
+    },
+    {
+      "file": "cpp--328-template-unclosed-loop-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/328-template-unclosed-loop-expected-fail.lms",
+      "block": 0,
+      "line": 4,
+      "sha256": "e7910f39205ab17d08d36a9f405b3077eecca9871dc483dfaa3a798509d8cd19"
+    },
+    {
+      "file": "cpp--329-template-unclosed-condition-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/329-template-unclosed-condition-expected-fail.lms",
+      "block": 0,
+      "line": 4,
+      "sha256": "e7910f39205ab17d08d36a9f405b3077eecca9871dc483dfaa3a798509d8cd19"
+    },
+    {
+      "file": "cpp--330-template-unexpected-else-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/330-template-unexpected-else-expected-fail.lms",
+      "block": 0,
+      "line": 4,
+      "sha256": "e7910f39205ab17d08d36a9f405b3077eecca9871dc483dfaa3a798509d8cd19"
+    },
+    {
+      "file": "cpp--331-template-invalid-separator-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/331-template-invalid-separator-expected-fail.lms",
+      "block": 0,
+      "line": 4,
+      "sha256": "e7910f39205ab17d08d36a9f405b3077eecca9871dc483dfaa3a798509d8cd19"
+    },
+    {
+      "file": "cpp--332-template-index-reserved-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/332-template-index-reserved-expected-fail.lms",
+      "block": 0,
+      "line": 4,
+      "sha256": "e7910f39205ab17d08d36a9f405b3077eecca9871dc483dfaa3a798509d8cd19"
+    },
+    {
+      "file": "cpp--333-template-validate-empty-body-syntax-expected-fail--0.lmcode",
+      "origin": "cpp",
+      "source": "sample-suite/programs/333-template-validate-empty-body-syntax-expected-fail.lms",
+      "block": 0,
+      "line": 4,
+      "sha256": "e7910f39205ab17d08d36a9f405b3077eecca9871dc483dfaa3a798509d8cd19"
+    }
+  ]
+}

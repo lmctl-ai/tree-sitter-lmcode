@@ -1,0 +1,3 @@
+region(${REGION});
+tags(${TAGS});
+hosts(qw(db-1.example));
