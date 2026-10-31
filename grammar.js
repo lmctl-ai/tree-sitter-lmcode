@@ -16,7 +16,7 @@ module.exports = grammar({
  conflicts:$=>[[$._name,$.null]],
  rules:{
   source_file:$=>seq(repeat(choice($.function_declaration,$._statement)),$.end_of_file),
-  _splice_reserved:$=>token(choice(...['system','cmd','fn','function','let','const','if','else','while','for','return','break','continue','true','false','null','parallel','parallel_map','sync','import','recover','resumepoint','_csv_','_toml_','_props_','_json_','_cmd_','_graphql_','_dsl_','_lmcode_'])),
+  _splice_reserved:$=>token(choice(...['fn','function','let','const','if','else','while','for','return','break','continue','parallel','parallel_map','sync','import','recover','resumepoint','_csv_','_toml_','_props_','_json_','_cmd_','_graphql_','_dsl_','_lmcode_'])),
   comment:$=>token(/#[^\r\n]*/),
   identifier:$=>/[A-Za-z_][A-Za-z0-9_]*/,
   _name:$=>choice($.identifier,alias(choice('qw','qi','qf','json','null'),$.identifier)),

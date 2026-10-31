@@ -35,14 +35,6 @@
         "members": [
           {
             "type": "STRING",
-            "value": "system"
-          },
-          {
-            "type": "STRING",
-            "value": "cmd"
-          },
-          {
-            "type": "STRING",
             "value": "fn"
           },
           {
@@ -84,18 +76,6 @@
           {
             "type": "STRING",
             "value": "continue"
-          },
-          {
-            "type": "STRING",
-            "value": "true"
-          },
-          {
-            "type": "STRING",
-            "value": "false"
-          },
-          {
-            "type": "STRING",
-            "value": "null"
           },
           {
             "type": "STRING",

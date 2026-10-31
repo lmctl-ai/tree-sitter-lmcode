@@ -36,5 +36,6 @@
   "splice-string-braces": "let x=${f\"name {lookup({key:1})} {{literal}}\"};",
   "splice-comments": "let x=${1 /* } */ + 2 // }\n};",
   "splice-header-newline": "pair(<<A, ${\"\"\"multi\nline\"\"\"});\nreal body\nA\n",
-  "splice-tuple": "let x=${(1,2,)};let y=${()};"
+  "splice-tuple": "let x=${(1,2,)};let y=${()};",
+  "splice-values-and-system": "let x=${[true,false,null]}; let y=${system([\"echo\", \"data\"])}; $return.return=1;\n"
 }

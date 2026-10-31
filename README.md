@@ -67,7 +67,7 @@ authoritative outer Lexer rather than a delimiter-only regex. It never executes 
 script or queries a host. Body/source hashes, block numbers and original line
 numbers are in test/fixtures/conformance/manifest.json. CI needs no private checkout.
 
-The 38 tree-sitter corpus cases, 21 syntax-refusal cases, combined feature/splice
+The 39 tree-sitter corpus cases, 21 syntax-refusal cases, combined feature/splice
 fixtures and incremental/scanner stress gates complement those real bodies.
 Mutations remove serialized heredoc state, map-entry arrows, dedent recognition,
 splice-phase isolation, EOF enforcement and qw scanning. No changed assertions or

@@ -885,3 +885,35 @@ let x=${(1,2,)};let y=${()};
       (splice_parenthesized)
       (splice_end)))
   (end_of_file))
+
+==================
+splice-values-and-system
+==================
+let x=${[true,false,null]}; let y=${system(["echo", "data"])}; $return.return=1;
+
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (splice
+      (splice_start)
+      (splice_list
+        (true)
+        (false)
+        (null))
+      (splice_end)))
+  (let_statement
+    (identifier)
+    (splice
+      (splice_start)
+      (splice_system_call
+        (splice_list
+          (splice_string)
+          (splice_string)))
+      (splice_end)))
+  (return_assignment
+    (return_target
+      (identifier))
+    (int_literal))
+  (end_of_file))

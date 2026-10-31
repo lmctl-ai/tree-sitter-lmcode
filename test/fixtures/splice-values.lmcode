@@ -1,0 +1,1 @@
+let x=${[true,false,null]}; let y=${system(["echo", "data"])}; $return.return=1;

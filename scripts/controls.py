@@ -3,6 +3,7 @@
 import os,pathlib,shutil,subprocess,tempfile
 ROOT=pathlib.Path(__file__).resolve().parents[1];CLI=os.environ.get('TREE_SITTER','tree-sitter')
 controls=[
+ ('reserved literals','grammar.js',"_splice_reserved:$=>token(choice(...['fn'","_splice_reserved:$=>token(choice(...['true','false','null','system','fn'",'test/fixtures/splice-values.lmcode',False),
  ('lost heredoc state','src/scanner.c','return s->used+3;','return 0;','test/fixtures/conformance/mono--01_dsl_heredoc--0.lmcode',False),
  ('lost map entry arrow','grammar.js'," '=>',field('value'"," '->',field('value'",'test/fixtures/conformance/cpp--203-map-literals--0.lmcode',False),
  ('lost dedent','src/scanner.c','bool dedent=s->queue[2]!=0;','bool dedent=false;','test/fixtures/conformance/mono--01_dsl_heredoc--0.lmcode',False),
