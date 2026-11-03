@@ -66,6 +66,47 @@ let s="a\n\t\r\\\"";
   (end_of_file))
 
 ==================
+formatted-string-nested-expression
+==================
+let text=f"value={format(user.name, clamp(score, 0, 10))}";
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (formatted_string
+      (formatted_field
+        (call_expression
+          (identifier)
+          (argument_list
+            (member_expression
+              (identifier)
+              (identifier))
+            (call_expression
+              (identifier)
+              (argument_list
+                (identifier)
+                (int_literal)
+                (int_literal))))))))
+  (end_of_file))
+
+==================
+formatted-string-escapes-and-literal-braces
+==================
+let text=f"{{literal}} {name}\n{count}";
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (formatted_string
+      (formatted_field
+        (identifier))
+      (formatted_field
+        (identifier))))
+  (end_of_file))
+
+==================
 plain-heredoc
 ==================
 let s=<<TAG;

@@ -53,10 +53,19 @@ module.exports = grammar({
   call_expression:$=>prec.left(9,seq(field('function',choice($._name,$.member_expression)),$.argument_list)),
   argument_list:$=>seq('(',commaSep($._expression),')'),
   member_expression:$=>prec(10,seq(field('object',$._expression),'.',field('property',$._name))),
-  _primary:$=>choice($._name,$.int_literal,$.float_literal,$.string,$.true,$.false,$.qw_literal,$.qi_literal,$.qf_literal,$.map_literal,$.heredoc_literal,$.json_literal,$.splice),
+  _primary:$=>choice($._name,$.int_literal,$.float_literal,$.formatted_string,$.string,$.true,$.false,$.qw_literal,$.qi_literal,$.qf_literal,$.map_literal,$.heredoc_literal,$.json_literal,$.splice),
   int_literal:$=>/[0-9]+/,
   float_literal:$=>/[0-9]+\.[0-9]+/,
   string:$=>token(seq('"',repeat(choice(/[^"\\\r\n]/,/\\[ntr"\\]/)),'"')),
+  // Inner lmcode f-strings are single-line double-quoted literals. Braced fields
+  // contain ordinary lmcode expressions; doubled braces are literal braces.
+  formatted_string:$=>seq('f"',repeat(choice(
+   token.immediate(prec(1,/[^{}"\\\r\n]+/)),
+   token.immediate(prec(1,/\\[ntr"\\]/)),
+   token.immediate(prec(1,choice('{{','}}'))),
+   $.formatted_field
+  )),'"'),
+  formatted_field:$=>seq('{',$._expression,'}'),
   true:$=>'true',false:$=>'false',
   qw_literal:$=>seq('qw',token.immediate('('),repeat(choice($.qw_word,$._quote_space)),')'),
   qi_literal:$=>seq('qi',token.immediate('('),repeat(choice($.qi_word,$._quote_space)),')'),
