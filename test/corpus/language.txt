@@ -76,15 +76,15 @@ let text=f"value={format(user.name, clamp(score, 0, 10))}";
     (identifier)
     (formatted_string
       (formatted_field
-        (call_expression
+        (formatted_call_expression
           (identifier)
-          (argument_list
-            (member_expression
+          (formatted_argument_list
+            (formatted_member_expression
               (identifier)
               (identifier))
-            (call_expression
+            (formatted_call_expression
               (identifier)
-              (argument_list
+              (formatted_argument_list
                 (identifier)
                 (int_literal)
                 (int_literal))))))))

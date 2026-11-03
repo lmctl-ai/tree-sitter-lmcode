@@ -1,1 +1,1 @@
-let value=f"outer {f\"inner {name}\"}";
+let value=f"outer {f"inner"}";

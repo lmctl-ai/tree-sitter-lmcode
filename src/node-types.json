@@ -740,21 +740,13 @@
     }
   },
   {
-    "type": "formatted_field",
+    "type": "formatted_argument_list",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": true,
+      "multiple": true,
+      "required": false,
       "types": [
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "call_expression",
-          "named": true
-        },
         {
           "type": "false",
           "named": true
@@ -764,7 +756,27 @@
           "named": true
         },
         {
-          "type": "formatted_string",
+          "type": "formatted_binary_expression",
+          "named": true
+        },
+        {
+          "type": "formatted_call_expression",
+          "named": true
+        },
+        {
+          "type": "formatted_map_literal",
+          "named": true
+        },
+        {
+          "type": "formatted_member_expression",
+          "named": true
+        },
+        {
+          "type": "formatted_parenthesized",
+          "named": true
+        },
+        {
+          "type": "formatted_unary_expression",
           "named": true
         },
         {
@@ -784,15 +796,324 @@
           "named": true
         },
         {
-          "type": "map_literal",
+          "type": "qf_literal",
           "named": true
         },
         {
-          "type": "member_expression",
+          "type": "qi_literal",
           "named": true
         },
         {
-          "type": "parenthesized",
+          "type": "qw_literal",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "true",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "formatted_binary_expression",
+    "named": true,
+    "fields": {
+      "left": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "false",
+            "named": true
+          },
+          {
+            "type": "float_literal",
+            "named": true
+          },
+          {
+            "type": "formatted_binary_expression",
+            "named": true
+          },
+          {
+            "type": "formatted_call_expression",
+            "named": true
+          },
+          {
+            "type": "formatted_map_literal",
+            "named": true
+          },
+          {
+            "type": "formatted_member_expression",
+            "named": true
+          },
+          {
+            "type": "formatted_parenthesized",
+            "named": true
+          },
+          {
+            "type": "formatted_unary_expression",
+            "named": true
+          },
+          {
+            "type": "heredoc_literal",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "int_literal",
+            "named": true
+          },
+          {
+            "type": "json_literal",
+            "named": true
+          },
+          {
+            "type": "qf_literal",
+            "named": true
+          },
+          {
+            "type": "qi_literal",
+            "named": true
+          },
+          {
+            "type": "qw_literal",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "!=",
+            "named": false
+          },
+          {
+            "type": "%",
+            "named": false
+          },
+          {
+            "type": "&&",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "==",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": "||",
+            "named": false
+          }
+        ]
+      },
+      "right": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "false",
+            "named": true
+          },
+          {
+            "type": "float_literal",
+            "named": true
+          },
+          {
+            "type": "formatted_binary_expression",
+            "named": true
+          },
+          {
+            "type": "formatted_call_expression",
+            "named": true
+          },
+          {
+            "type": "formatted_map_literal",
+            "named": true
+          },
+          {
+            "type": "formatted_member_expression",
+            "named": true
+          },
+          {
+            "type": "formatted_parenthesized",
+            "named": true
+          },
+          {
+            "type": "formatted_unary_expression",
+            "named": true
+          },
+          {
+            "type": "heredoc_literal",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "int_literal",
+            "named": true
+          },
+          {
+            "type": "json_literal",
+            "named": true
+          },
+          {
+            "type": "qf_literal",
+            "named": true
+          },
+          {
+            "type": "qi_literal",
+            "named": true
+          },
+          {
+            "type": "qw_literal",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "formatted_call_expression",
+    "named": true,
+    "fields": {
+      "function": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "formatted_member_expression",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "formatted_argument_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "formatted_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "false",
+          "named": true
+        },
+        {
+          "type": "float_literal",
+          "named": true
+        },
+        {
+          "type": "formatted_binary_expression",
+          "named": true
+        },
+        {
+          "type": "formatted_call_expression",
+          "named": true
+        },
+        {
+          "type": "formatted_map_literal",
+          "named": true
+        },
+        {
+          "type": "formatted_member_expression",
+          "named": true
+        },
+        {
+          "type": "formatted_parenthesized",
+          "named": true
+        },
+        {
+          "type": "formatted_unary_expression",
+          "named": true
+        },
+        {
+          "type": "heredoc_literal",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "int_literal",
+          "named": true
+        },
+        {
+          "type": "json_literal",
           "named": true
         },
         {
@@ -808,7 +1129,285 @@
           "named": true
         },
         {
-          "type": "splice",
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "true",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "formatted_map_entry",
+    "named": true,
+    "fields": {
+      "key": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "formatted_parenthesized",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "false",
+            "named": true
+          },
+          {
+            "type": "float_literal",
+            "named": true
+          },
+          {
+            "type": "formatted_binary_expression",
+            "named": true
+          },
+          {
+            "type": "formatted_call_expression",
+            "named": true
+          },
+          {
+            "type": "formatted_map_literal",
+            "named": true
+          },
+          {
+            "type": "formatted_member_expression",
+            "named": true
+          },
+          {
+            "type": "formatted_parenthesized",
+            "named": true
+          },
+          {
+            "type": "formatted_unary_expression",
+            "named": true
+          },
+          {
+            "type": "heredoc_literal",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "int_literal",
+            "named": true
+          },
+          {
+            "type": "json_literal",
+            "named": true
+          },
+          {
+            "type": "qf_literal",
+            "named": true
+          },
+          {
+            "type": "qi_literal",
+            "named": true
+          },
+          {
+            "type": "qw_literal",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "formatted_map_literal",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "formatted_map_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "formatted_member_expression",
+    "named": true,
+    "fields": {
+      "object": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "false",
+            "named": true
+          },
+          {
+            "type": "float_literal",
+            "named": true
+          },
+          {
+            "type": "formatted_binary_expression",
+            "named": true
+          },
+          {
+            "type": "formatted_call_expression",
+            "named": true
+          },
+          {
+            "type": "formatted_map_literal",
+            "named": true
+          },
+          {
+            "type": "formatted_member_expression",
+            "named": true
+          },
+          {
+            "type": "formatted_parenthesized",
+            "named": true
+          },
+          {
+            "type": "formatted_unary_expression",
+            "named": true
+          },
+          {
+            "type": "heredoc_literal",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "int_literal",
+            "named": true
+          },
+          {
+            "type": "json_literal",
+            "named": true
+          },
+          {
+            "type": "qf_literal",
+            "named": true
+          },
+          {
+            "type": "qi_literal",
+            "named": true
+          },
+          {
+            "type": "qw_literal",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": true
+          }
+        ]
+      },
+      "property": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "formatted_parenthesized",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "false",
+          "named": true
+        },
+        {
+          "type": "float_literal",
+          "named": true
+        },
+        {
+          "type": "formatted_binary_expression",
+          "named": true
+        },
+        {
+          "type": "formatted_call_expression",
+          "named": true
+        },
+        {
+          "type": "formatted_map_literal",
+          "named": true
+        },
+        {
+          "type": "formatted_member_expression",
+          "named": true
+        },
+        {
+          "type": "formatted_parenthesized",
+          "named": true
+        },
+        {
+          "type": "formatted_unary_expression",
+          "named": true
+        },
+        {
+          "type": "heredoc_literal",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "int_literal",
+          "named": true
+        },
+        {
+          "type": "json_literal",
+          "named": true
+        },
+        {
+          "type": "qf_literal",
+          "named": true
+        },
+        {
+          "type": "qi_literal",
+          "named": true
+        },
+        {
+          "type": "qw_literal",
           "named": true
         },
         {
@@ -817,10 +1416,6 @@
         },
         {
           "type": "true",
-          "named": true
-        },
-        {
-          "type": "unary_expression",
           "named": true
         }
       ]
@@ -839,6 +1434,100 @@
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "formatted_unary_expression",
+    "named": true,
+    "fields": {
+      "argument": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "false",
+            "named": true
+          },
+          {
+            "type": "float_literal",
+            "named": true
+          },
+          {
+            "type": "formatted_binary_expression",
+            "named": true
+          },
+          {
+            "type": "formatted_call_expression",
+            "named": true
+          },
+          {
+            "type": "formatted_map_literal",
+            "named": true
+          },
+          {
+            "type": "formatted_member_expression",
+            "named": true
+          },
+          {
+            "type": "formatted_parenthesized",
+            "named": true
+          },
+          {
+            "type": "formatted_unary_expression",
+            "named": true
+          },
+          {
+            "type": "heredoc_literal",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "int_literal",
+            "named": true
+          },
+          {
+            "type": "json_literal",
+            "named": true
+          },
+          {
+            "type": "qf_literal",
+            "named": true
+          },
+          {
+            "type": "qi_literal",
+            "named": true
+          },
+          {
+            "type": "qw_literal",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "true",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          }
+        ]
+      }
     }
   },
   {

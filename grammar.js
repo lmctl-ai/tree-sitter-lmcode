@@ -65,7 +65,19 @@ module.exports = grammar({
    token.immediate(prec(1,choice('{{','}}'))),
    $.formatted_field
   )),'"'),
-  formatted_field:$=>seq('{',$._expression,'}'),
+  formatted_field:$=>seq('{',$._formatted_expression,'}'),
+  // A field may contain arbitrarily nested ordinary expressions, but the
+  // compiler deliberately rejects a second formatted string in that tree.
+  _formatted_expression:$=>choice($.formatted_binary_expression,$.formatted_unary_expression,$.formatted_call_expression,$.formatted_member_expression,$.formatted_parenthesized,$._formatted_primary),
+  formatted_binary_expression:$=>choice(...binary($._formatted_expression)),
+  formatted_unary_expression:$=>prec(7,seq(field('operator',choice('!','-')),field('argument',$._formatted_expression))),
+  formatted_call_expression:$=>prec.left(9,seq(field('function',choice($._name,$.formatted_member_expression)),$.formatted_argument_list)),
+  formatted_argument_list:$=>seq('(',commaSep($._formatted_expression),')'),
+  formatted_member_expression:$=>prec(10,seq(field('object',$._formatted_expression),'.',field('property',$._name))),
+  formatted_parenthesized:$=>seq('(',$._formatted_expression,')'),
+  _formatted_primary:$=>choice($._name,$.int_literal,$.float_literal,$.string,$.true,$.false,$.qw_literal,$.qi_literal,$.qf_literal,$.formatted_map_literal,$.heredoc_literal,$.json_literal),
+  formatted_map_literal:$=>seq('%','(',optional(seq($.formatted_map_entry,repeat(seq(',',$.formatted_map_entry)),optional(','))),')'),
+  formatted_map_entry:$=>seq(field('key',choice($._field_name,$.string,$.formatted_parenthesized)),'=>',field('value',$._formatted_expression)),
   true:$=>'true',false:$=>'false',
   qw_literal:$=>seq('qw',token.immediate('('),repeat(choice($.qw_word,$._quote_space)),')'),
   qi_literal:$=>seq('qi',token.immediate('('),repeat(choice($.qi_word,$._quote_space)),')'),
