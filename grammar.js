@@ -75,7 +75,7 @@ module.exports = grammar({
   formatted_argument_list:$=>seq('(',commaSep($._formatted_expression),')'),
   formatted_member_expression:$=>prec(10,seq(field('object',$._formatted_expression),'.',field('property',$._name))),
   formatted_parenthesized:$=>seq('(',$._formatted_expression,')'),
-  _formatted_primary:$=>choice($._name,$.int_literal,$.float_literal,$.string,$.true,$.false,$.qw_literal,$.qi_literal,$.qf_literal,$.formatted_map_literal,$.heredoc_literal,$.json_literal),
+  _formatted_primary:$=>choice($._name,$.int_literal,$.float_literal,$.string,$.true,$.false,$.qw_literal,$.qi_literal,$.qf_literal,$.formatted_map_literal,$.heredoc_literal,$.json_literal,$.splice),
   formatted_map_literal:$=>seq('%','(',optional(seq($.formatted_map_entry,repeat(seq(',',$.formatted_map_entry)),optional(','))),')'),
   formatted_map_entry:$=>seq(field('key',choice($._field_name,$.string,$.formatted_parenthesized)),'=>',field('value',$._formatted_expression)),
   true:$=>'true',false:$=>'false',

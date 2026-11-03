@@ -2573,6 +2573,10 @@
         {
           "type": "SYMBOL",
           "name": "json_literal"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "splice"
         }
       ]
     },

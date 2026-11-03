@@ -107,6 +107,23 @@ let text=f"{{literal}} {name}\n{count}";
   (end_of_file))
 
 ==================
+formatted-string-outer-splice-field
+==================
+let text=f"value={${field}}";
+---
+
+(source_file
+  (let_statement
+    (identifier)
+    (formatted_string
+      (formatted_field
+        (splice
+          (splice_start)
+          (identifier)
+          (splice_end)))))
+  (end_of_file))
+
+==================
 plain-heredoc
 ==================
 let s=<<TAG;

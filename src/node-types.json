@@ -808,6 +808,10 @@
           "named": true
         },
         {
+          "type": "splice",
+          "named": true
+        },
+        {
           "type": "string",
           "named": true
         },
@@ -884,6 +888,10 @@
           },
           {
             "type": "qw_literal",
+            "named": true
+          },
+          {
+            "type": "splice",
             "named": true
           },
           {
@@ -1019,6 +1027,10 @@
             "named": true
           },
           {
+            "type": "splice",
+            "named": true
+          },
+          {
             "type": "string",
             "named": true
           },
@@ -1129,6 +1141,10 @@
           "named": true
         },
         {
+          "type": "splice",
+          "named": true
+        },
+        {
           "type": "string",
           "named": true
         },
@@ -1223,6 +1239,10 @@
           },
           {
             "type": "qw_literal",
+            "named": true
+          },
+          {
+            "type": "splice",
             "named": true
           },
           {
@@ -1321,6 +1341,10 @@
             "named": true
           },
           {
+            "type": "splice",
+            "named": true
+          },
+          {
             "type": "string",
             "named": true
           },
@@ -1408,6 +1432,10 @@
         },
         {
           "type": "qw_literal",
+          "named": true
+        },
+        {
+          "type": "splice",
           "named": true
         },
         {
@@ -1502,6 +1530,10 @@
           },
           {
             "type": "qw_literal",
+            "named": true
+          },
+          {
+            "type": "splice",
             "named": true
           },
           {
