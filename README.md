@@ -80,3 +80,8 @@ checkouts (mono, lmok, lmcode-cpp, lmcode spec). Review SOURCE-PINS.json and fix
 changes together. S3's 500-document semantic differential harness and S4/S5 lmok
 registration/injection are separate landing slices; this S2 repository does not
 claim those integrations are complete.
+
+Formatted strings in `_lmcode_` bodies belong to lmscript's higher-level body
+expansion, not the standalone lmcode language. This grammar rejects `f"..."`.
+The body companion in tree-sitter-lmscript owns that template syntax; existing
+`${...}` nodes remain explicitly outer-language analysis placeholders.

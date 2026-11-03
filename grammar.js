@@ -53,31 +53,10 @@ module.exports = grammar({
   call_expression:$=>prec.left(9,seq(field('function',choice($._name,$.member_expression)),$.argument_list)),
   argument_list:$=>seq('(',commaSep($._expression),')'),
   member_expression:$=>prec(10,seq(field('object',$._expression),'.',field('property',$._name))),
-  _primary:$=>choice($._name,$.int_literal,$.float_literal,$.formatted_string,$.string,$.true,$.false,$.qw_literal,$.qi_literal,$.qf_literal,$.map_literal,$.heredoc_literal,$.json_literal,$.splice),
+  _primary:$=>choice($._name,$.int_literal,$.float_literal,$.string,$.true,$.false,$.qw_literal,$.qi_literal,$.qf_literal,$.map_literal,$.heredoc_literal,$.json_literal,$.splice),
   int_literal:$=>/[0-9]+/,
   float_literal:$=>/[0-9]+\.[0-9]+/,
   string:$=>token(seq('"',repeat(choice(/[^"\\\r\n]/,/\\[ntr"\\]/)),'"')),
-  // Inner lmcode f-strings are single-line double-quoted literals. Braced fields
-  // contain ordinary lmcode expressions; doubled braces are literal braces.
-  formatted_string:$=>seq('f"',repeat(choice(
-   token.immediate(prec(1,/[^{}"\\\r\n]+/)),
-   token.immediate(prec(1,/\\[ntr"\\]/)),
-   token.immediate(prec(1,choice('{{','}}'))),
-   $.formatted_field
-  )),'"'),
-  formatted_field:$=>seq('{',$._formatted_expression,'}'),
-  // A field may contain arbitrarily nested ordinary expressions, but the
-  // compiler deliberately rejects a second formatted string in that tree.
-  _formatted_expression:$=>choice($.formatted_binary_expression,$.formatted_unary_expression,$.formatted_call_expression,$.formatted_member_expression,$.formatted_parenthesized,$._formatted_primary),
-  formatted_binary_expression:$=>choice(...binary($._formatted_expression)),
-  formatted_unary_expression:$=>prec(7,seq(field('operator',choice('!','-')),field('argument',$._formatted_expression))),
-  formatted_call_expression:$=>prec.left(9,seq(field('function',choice($._name,$.formatted_member_expression)),$.formatted_argument_list)),
-  formatted_argument_list:$=>seq('(',commaSep($._formatted_expression),')'),
-  formatted_member_expression:$=>prec(10,seq(field('object',$._formatted_expression),'.',field('property',$._name))),
-  formatted_parenthesized:$=>seq('(',$._formatted_expression,')'),
-  _formatted_primary:$=>choice($._name,$.int_literal,$.float_literal,$.string,$.true,$.false,$.qw_literal,$.qi_literal,$.qf_literal,$.formatted_map_literal,$.heredoc_literal,$.json_literal,$.splice),
-  formatted_map_literal:$=>seq('%','(',optional(seq($.formatted_map_entry,repeat(seq(',',$.formatted_map_entry)),optional(','))),')'),
-  formatted_map_entry:$=>seq(field('key',choice($._field_name,$.string,$.formatted_parenthesized)),'=>',field('value',$._formatted_expression)),
   true:$=>'true',false:$=>'false',
   qw_literal:$=>seq('qw',token.immediate('('),repeat(choice($.qw_word,$._quote_space)),')'),
   qi_literal:$=>seq('qi',token.immediate('('),repeat(choice($.qi_word,$._quote_space)),')'),
